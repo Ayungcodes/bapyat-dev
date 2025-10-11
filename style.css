@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+body {
+  box-sizing: border-box;
+  background-color: #0d1117;
+  background-image: url('./photo/abstract-digital-grid-black-background.jpg');
+  font-family: 'Space Grotesk', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.8s;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+      width: 20px;
+      height: 1px;
+      background-color: #fff;
+      transform: rotate(0);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .open .hamburger-top {
+      transform: rotate(45deg) translate(6px, 2px);
+    }
+    .open .hamburger-middle {
+      display: none;
+    }
+    .open .hamburger-bottom {
+      transform: rotate(-45deg) translate(6px, -2px);
+    }
+
+    .menu-closed {
+      transform: translateX(100%);
+    }
+
+    .menu-open {
+      transform: translateX(0);
+    }
