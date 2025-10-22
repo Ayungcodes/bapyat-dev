@@ -286,6 +286,21 @@
   .mt-70 {
     margin-top: calc(var(--spacing) * 70);
   }
+  .mt-80 {
+    margin-top: calc(var(--spacing) * 80);
+  }
+  .mt-96 {
+    margin-top: calc(var(--spacing) * 96);
+  }
+  .mt-\[100px\] {
+    margin-top: 100px;
+  }
+  .mt-\[410px\] {
+    margin-top: 410px;
+  }
+  .mt-\[430px\] {
+    margin-top: 430px;
+  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
@@ -815,6 +830,16 @@
       background-color: var(--color-red-400);
     }
   }
+  .hover\:scale-95 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 95%;
+        --tw-scale-y: 95%;
+        --tw-scale-z: 95%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:bg-gray-300 {
     &:hover {
       @media (hover: hover) {
@@ -887,6 +912,16 @@
   .md\:mx-8 {
     @media (width >= 48rem) {
       margin-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:mt-40 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 40);
+    }
+  }
+  .md\:mt-50 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 50);
     }
   }
   .md\:flex {
@@ -1336,6 +1371,21 @@ body {
   syntax: "*";
   inherits: false;
 }
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -1376,6 +1426,9 @@ body {
       --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
     }
   }
 }
