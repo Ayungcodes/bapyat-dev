@@ -1,300 +1,671 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link href="./output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
-
-</head>
-<body>
-  <div id="loader" class="fixed inset-0 flex items-center justify-center bg-[#0d1117] z-50">
-  <div class="animate-spin rounded-full h-12 w-12 border-4 border-gray-500 border-t-transparent"></div>
-</div>
-
-  <!-- Navbar -->
-  <nav class="fixed top-0 right-0 left-0 w-screen mx-auto p-6 text-gray-300">
-    <div class="flex items-center justify-between">
-      <!-- logo -->
-      <a href="index.html" class="font-bold font-[Fredoka] -rotate-6 text-2xl"><span class="text-red-400"><i>Bapyat</i></span>.dev</a>
-
-      <!-- desktop menu items -->
-      <div class="hidden md:flex space-x-8 font-bold text-lg">
-        <a href="#about">
-          <div class="relative group inline-block">
-          <span class="">About</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-        </div>
-        </a>
-        <a href="#projects">
-          <div class="relative group inline-block">
-          <span class="">Projects</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-        </div>
-        </a>
-        <a href="#skills">
-          <div class="relative group inline-block">
-          <span class="">Skills</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-        </div>
-        </a>
-        <a href="#contact">
-          <div class="relative group inline-block">
-          <span class="">Contact</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-        </div>
-        </a>
-        <div>
-          <a href="#hire" class="py-1 px-5 rounded-4xl bg-red-400 hover:bg-red-500 transition duration-300 cursor-pointer">Hire Me</a>
-        </div>
-      </div>
-
-      <!-- hamburger button -->
-      <button id="menu-btn" class="block md:hidden focus:outline-none z-50 cursor-pointer">
-        <div class="space-y-2">
-          <span class="hamburger-top block"></span>
-          <span class="hamburger-middle block"></span>
-          <span class="hamburger-bottom block"></span>
-        </div>
-      </button>
-
-      <!-- mobile menu -->
-      <div id="mobile-menu" class="text-center text-gray-400 absolute top-0 right-0 text-[18px] menu-closed transition-transform duration-200 ease-in-out z-40 bg-[#121212] md:hidden">
-        <div class=" flex flex-col justify-around items-start h-screen w-screen px-4 py-18">
-          <div class="flex flex-row justify-between items-center gap-32 mx-auto">
-          <div class="flex flex-col items-start space-y-7 ml-3">
-            <!-- nav for mobile -->
-            <h3 class="text-gray-500 text-[15px]">Menu</h3>
-            <a id="about-nav" href="#about" class="hover:text-red-400 transition duration-200 cursor-pointer">About</a>
-            <a id="projects-nav" href="#projects" class="hover:text-red-400 transition duration-200 cursor-pointer">Projects</a>
-            <a id="skills-nav" href="#skills" class="hover:text-red-400 transition duration-200 cursor-pointer">Skills</a>
-            <a id="contact-nav" href="#contact" class="hover:text-red-400 transition duration-200 cursor-pointer">Contact</a>
-          </div>
-        <!-- socials -->
-         <div class="flex flex-col items-start text-[18px] space-y-7 text-center">
-          <h3 class="text-gray-500 text-[15px]">Socials</h3>
-          <a id="linkedin" href="#" target="_blank" class="underline hover:text-white transition duration-300">LinkedIn</a>
-          <a id="github" href="https://github.com/Ayungcodes" target="_blank" class="underline hover:text-white transition duration-300">GitHub</a>
-          <a id="twitter" href="https://x.com/Ayungclassics" target="_blank" class="underline hover:text-white transition duration-300">Twitter/X</a>
-          <a id="instagram" href="https://www.instagram.com/ayungclassic/" target="_blank" class="underline hover:text-white transition duration-300">Instagram</a>
-         </div>
-        </div>
-
-        <div class="mx-auto">
-          <a id="hire-nav" href="#hire" class="py-1 px-7 rounded-4xl bg-red-400 text-gray-300 hover:bg-red-500 hover:text-white transition duration-300 cursor-pointer">Hire Me</a>
-        </div>
-        <!-- footer for mobile menu area -->
-        <div class="absolute bottom-0 flex items-center w-screen h-10 p-2 border-gray-800 text-[13px] lg:justify-center md:text-xl botttom-0">
-        <h2 class="text-gray-300">Crafted by <span class="text-red-400">Gaius Emmanuel.</span></h2>
-      </div>
-        </div>
-
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <!-- Welcome section -->
-   <section id="welcom-sec" class="mt-46 md:mt-80 lg:mt-57">
-    <div class="my-31 mx-auto flex flex-col justify-center items-center space-y-15 md:space-y-20 text-gray-300">
-      <h2 class="text-2xl tracking-tight md:text-3xl">Hi there!</h2>
-      <div class="flex flex-col justify-center items-center space-y-2">
-        <h1 class="text-2xl tracking-tight md:text-4xl">I'm <span class="font-semibold">Gaius Emmanuel</span></h1>
-        <h3 class="text-gray-400 mx-8 text-lg text-center tracking-tight md:text-2xl p-3"><i>A <span class="text-red-400">Frontend Developer</span> with a passion for clean code and seamless user experience.</i></h3>
-        <a href="./mycv.pdf" target="_blank" class="py-1 px-10 bg-gray-500 text-gray-950 rounded-3xl mt-7 hover:bg-gray-300 transition duration-200 md:text-xl">Check out my resume</a>
-      </div>
-    </div>
-   </section>
-
-   <!-- About section -->
-    <section id="about" class="mt-10 md:mt-100">
-      <div class="h-full w-screen mt-60 p-4 container flex flex-col items-center justify-center text-gray-300 mx-auto space-y-8 lg:flex-row-reverse lg:w-1/1 lg:justify-between lg:mt-150 rounded-3xl">
-        <div class="mt-30 w-70 border-2 border-red-400 lg:w-350 lg:mt-15 md:w-90 mx-5">
-          <img src="./photo/D3967773-10B1-4109-B866-EA09DE1D0D48.JPG" alt="My Photo">
-        </div>
-
-        <div class="mx-3 space-y-5 tracking-tight">
-          <h1 class="text-center font-bold text-3xl underline underline-offset-10 decoration-red-400 md:text-4xl">About Me</h1>
-          <div class="text-lg space-y-5 lg:mx-6 selection:bg-red-400 md:text-2xl">
-            <p>As a driven and innovative front-end developer with over 2 years of experience, I specialize in crafting captivating user interfaces that blend functionality with flawless design. With a strong foundation in modern CSS frameworks, JavaScript and React, I expertly bridge the gap between aesthetics and functionality, delivering seamless web experiences that engage and inspire.
-          </p>
-
-            <p>
-              Passionate about staying at the forefront of industry trends, I continually expand my skill set to incorporate cutting-edge technologies and best practices. My expertise spans responsive design, component-driven development, and efficient coding methodologies. With a keen eye for detail and dedication to precision, I consistently deliver high-quality solutions that exceed client expectations.
-            </p>
-            
-            <p>
-              Collaboration and continuous learning are at the core of my approach. I thrive in team environments, sharing knowledge and expertise to drive collective growth. With a portfolio showcasing diverse projects and a relentless pursuit of excellence, I'm committed to pushing the boundaries of what's possible in front-end development.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured projects -->
-    <section id="projects" class="bg-gray-900 mt-50 rounded-3xl shadow-2xl py-5">
-      <div class="w-full h-full space-y-7">
-        
-
-      <div class="pt-9 flex flex-col gap-4 justify-center items-center tracking-tight">
-        <h1 class="text-3xl font-bold text-gray-300 text-center underline underline-offset-10 decoration-red-400 md:text-4xl">
-        Featured Projects
-      </h1>
-      <p class="text-lg text-center text-gray-300 mx-4 md:mx-8 md:text-2xl">I love turning ideas into interactive, user-friendly experiences. These projects highlight my growth, creativity, and ability to bring concepts to life on the web.</p>
-      </div>
-
-
-      <div class="flex flex-wrap justify-center items-center mx-auto space-x-5 space-y-5 text-center text-gray-800">
-
-        <div class="w-[325px] h-[355px] bg-gray-800 m-2 rounded-3xl">
-          <img src="./photo/Screenshot (16).png" alt="luxury watch store" class="w-full object-contain">
-          <div class="text-gray-300 flex flex-col items-center my-3.5 gap-2 text-center mx-2">
-            <h1 class="font-semibold text-[17px]">Luxury Watch E-Commerce Website</h1>
-          <p class="text[15px]">A sleek luxury watch shop built with React and Tailwind CSS — clean, smooth, and made to feel as refined as the watches themselves.</p>
-          <a href="https://luxury-watch-shop-neon.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-5 bg-gray-500 text-gray-800 rounded-full hover:bg-gray-300 transition duration-200 md:px-7 lg:px-10 lg:text-lg cursor-pointer">View</a>
-          </div>
-        </div>
-
-          <div class="w-[325px] h-[355px] bg-gray-800 m-2 rounded-3xl">
-            <img src="./photo/Screenshot (48).png" alt="luxury watch store" class="w-full object-cover">
-          <div class="text-gray-300 flex flex-col items-center my-3.5 gap-2 text-center mx-2">
-            <h1 class="font-semibold text-[17px]">The Cookie Jar</h1>
-          <p class="text[15px]">The Cookie Jar is a playful, responsive cookie shop built with Vanilla JavaScript and TailwindCSS.</p>
-          <a href="https://cookie-jar-mu.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-5 bg-gray-500 text-gray-800 rounded-full hover:bg-gray-300 transition duration-200 md:px-7 lg:px-10 lg:text-lg cursor-pointer">View</a>
-          </div>
-        </div>
-        
-
-          <div class="w-[325px] h-[355px] bg-gray-800 m-3 rounded-3xl">
-            <img src="./photo/Screenshot (65).png" alt="luxury watch store" class="w-full object-cover">
-          <div class="text-gray-300 flex flex-col items-center my-3.5 gap-2 text-center mx-2">
-            <h1 class="font-semibold text-[17px]">Rock, Paper Scissors Game</h1>
-          <p class="text[15px]">A modern take on Rock, Paper, Scissors — built with Vanilla JS and TailwindCSS, with scores saved using localStorage.</p>
-          <a href="https://rock-paper-scissors-two-swart.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-5 bg-gray-500 text-gray-800 rounded-full hover:bg-gray-300 transition duration-200 md:px-7 lg:px-10 lg:text-lg cursor-pointer">View</a>
-          </div>
-          </div>
-
-          <div class="w-[325px] h-[355px] bg-gray-800 m-3 rounded-3xl">
-            
-          </div> 
-      </div>
-
-      <div class="text-center pb-4">
-          <a href="#" class="mx-auto px-15 py-1 bg-gray-500 rounded-full hover:bg-gray-300 transition duration-200 lg:px-25 lg:text-lg">View All</a>
-        </div> 
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      id="loader"
+      class="fixed inset-0 flex items-center justify-center bg-[#0d1117] z-50"
+    >
+      <div
+        class="animate-spin rounded-full h-12 w-12 border-4 border-gray-500 border-t-transparent"
+      ></div>
     </div>
 
-    </section>
+    <!-- Navbar -->
+    <nav class="fixed top-0 right-0 left-0 w-screen mx-auto p-6 text-gray-300">
+      <div class="flex items-center justify-between">
+        <!-- logo -->
+        <a href="index.html" class="font-bold font-[Fredoka] -rotate-6 text-2xl"
+          ><span class="text-red-400"><i>Bapyat</i></span
+          >.dev</a
+        >
 
-    <!-- Skills -->
-    <section id="skills" class="w-screen mt-70">
-      <div class="flex flex-col rounded-3xl justify-center items-center mx-auto w-screen shadow-2xl bg-gray-900 h-full p-8 space-y-10 lg:w-[75vw]">
-        <div class="pt-13 flex flex-col gap-4 justify-center items-center tracking-tight">
-        <h1 class="text-3xl font-bold text-gray-300 text-center md:text-4xl underline underline-offset-10 decoration-red-400">
-        Technologies I Use 
-      </h1>
-      <p class="text-lg text-center text-gray-300 space-y-4 mx-2 tracking-tight md:text-2xl">These are the tools and technologies I work with to design, build, and deploy efficient, scalable, and user-friendly applications.</p>
-      </div>
-
-      <div class="flex flex-wrap justify-evenly items-center mx-auto text-sm md:text-[18px] lg:text-lg text-center text-gray-400">
-
-        <div class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"><img class="w-full" src="./photo/html-5.png" alt="HTML5">HTML5</div>
-
-        <div class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"><img class="w-full" src="./photo/css-3.png" alt="CSS3">CSS3</div>
-
-        <div class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"><img class="w-full" src="./photo/js.png" alt="JS">JS</div>
-
-        <div class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"><img class="w-full" src="./photo/icons8-tailwind-css-100.png" alt="Tailwind">Tailwind</div>
-
-        <div class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"><img class="w-full" src="./photo/react.png" alt="React">React</div>
-        <div class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"><img class="w-full" src="./photo/icons8-git-48.png" alt="Git">Git</div>
-      </div>
-      <div class="flex flex-col justify-center items-center shadow-2xl h-43 w-78 rounded-4xl text-center text-md mb-5 bg-gray-800 text-gray-300 md:w-105">
-        <div class="py-2 space-y-0.5 mx-3 tracking-tight">
-          <h2 class="text-md font-semibold md:text-2xl">Always Learning</h2>
-          <p class="md:text-xl">Learning never stops. I make it a habit to push beyond my comfort zone, experiment with new ideas, and expand my knowledge to deliver better solutions.</p>
-        </div>
-      </div>
-      </div>
-    </section>
-
-     <!-- Contact section -->
-     <section id="hire" class="w-screen mt-50 text-gray-300">
-        <div class="h-full w-screen p-6 bg-gray-900 flex flex-col justify-center items-start mx-auto shadow-2xl space-y-4 rounded-3xl lg:w-[75vw]">
-          <h1 class="text-3xl text-gray-300 font-bold mt-10 mb-7 tracking-tight md:text-4xl underline underline-offset-10 decoration-red-400">Let's Connect</h1>
-        <div>
-          <div class="flex flex-row items-center gap-2">
-            <i class="fa-regular fa-id-badge text-4xl"></i>
-          <div class="lg:text-lg">
-          <h2 class="text-lg md:text-2xl tracking-tight">Gaius Emmanuel</h2>
-          <h3 class="text-md md:text-xl text-gray-400">Frontend Web Developer</h3>
-        </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex flex-row items-center gap-2">
-            <i class="fa-regular fa-user text-4xl"></i>
-          <div class="lg:text-lg">
-            <div class="flex flex-col space-y-2">
-              <a href="mailto:gaiusemmanuel12@gmail.com" target="_blank" rel="noopener noreferrer">
-          <div class="relative group inline-block md:text-center text-lg md:text-2xl">
-          <span class="">gaiusemmanuel12@gmail.com</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-        </div>
-        </a>
-        <a href="tel:+2347011372616" rel="noopener noreferrer" class="">
-          <div class="relative group inline-block text-lg md:text-2xl">
-          <span class="">+234 701 137 2616</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-        </div>
-        </a>
+        <!-- desktop menu items -->
+        <div class="hidden md:flex space-x-8 font-bold text-[16px]">
+          <a href="#about">
+            <div class="relative group inline-block">
+              <span class="">About</span>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"
+              ></span>
             </div>
-        </div>
-          </div>
-        </div>
-
-        <!-- Socials -->
-         <div class="space-y-3 mt-3 mb-6">
-          <h2 class="text-xl text-gray-300 font-semibold md:text-2xl">Check me out on:</h2>
-          <div class="flex flex-row justify-between items-center">
-          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-linkedin text-5xl hover:text-[#0077B5] transition duration-200"></i></a>
-          <a href="https://github.com/Ayungcodes" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github text-5xl hover:text-[#181717] transition duration-200"></i></a>
-          <a href="https://x.com/Ayungclassics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-x-twitter text-5xl hover:text-black transition duration-200"></i></a>
-          <a href="https://www.instagram.com/ayungclassic/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram text-5xl hover:text-[#E4405F] transition duration-200"></i></a>
-         </div>
-         </div>
-      </div>
-     </section>
-
-     <!-- Form section -->
-     <section id="contact" class="w-screen mt-40 text-gray-300">
-      <div class="mx-auto w-screen h-full p-12 bg-gray-900 shadow-2xl rounded-3xl lg:w-[75vw]">
-        <form id="contact-form" action="https://formspree.io/f/mrbarzay" method="POST" class="flex flex-col items-center space-y-8 mt-7">
-          <h2 class="text-left text-2xl text-red-400 font-bold md:text-4xl">Shoot a message</h2>
-          <input type="text" name="name" id="name" placeholder="Name" class="rounded-lg w-70 md:w-85 p-2 bg-gray-950" required>
-          <input type="email" name="email" id="email" placeholder="Email Adress" class="rounded-lg w-70 md:w-85 p-2 bg-gray-950" required>
-          <textarea name="message" id="message" placeholder="Your message..." class="rounded-xl p-2 w-70 md:w-85 h-20 bg-gray-950" required></textarea>
-          <button type="submit" class="py-1 px-20 bg-red-400 hover:bg-red-500 cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl">Shoot</button>
+          </a>
+          <a href="#projects">
+            <div class="relative group inline-block">
+              <span class="">Projects</span>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"
+              ></span>
+            </div>
+          </a>
+          <a href="#skills">
+            <div class="relative group inline-block">
+              <span class="">Skills</span>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"
+              ></span>
+            </div>
+          </a>
+          <a href="#contact">
+            <div class="relative group inline-block">
+              <span class="">Contact</span>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"
+              ></span>
+            </div>
+          </a>
           <div>
-            <p id="status-message" class="text-center text-xl"></p>
+            <a
+              href="#hire"
+              class="py-1 px-5 rounded-4xl bg-red-400 hover:bg-red-500 transition duration-300 cursor-pointer"
+              >Hire Me</a
+            >
           </div>
-        </form>
-      </div>
-     </section>
-  </main>
+        </div>
 
-     <!-- Footer -->
-     <footer class="w-screen shadow-2xl">
-      <div class="flex items-center w-screen h-full p-7 bg-black border-t-2 border-b-1 border-gray-800 text-sm mt-30 lg:justify-center md:text-xl">
-        <h2 class="text-gray-300">Crafted by <span class="text-red-400">Gaius Emmanuel.</span></h2>
-      </div>
-     </footer>
+        <!-- hamburger button -->
+        <button
+          id="menu-btn"
+          class="block md:hidden focus:outline-none z-50 cursor-pointer"
+        >
+          <div class="space-y-2">
+            <span class="hamburger-top block"></span>
+            <span class="hamburger-middle block"></span>
+            <span class="hamburger-bottom block"></span>
+          </div>
+        </button>
 
-  <script src="./script.js"></script>
-</body>
+        <!-- mobile menu -->
+        <div
+          id="mobile-menu"
+          class="text-center text-gray-400 absolute top-0 right-0 text-[17px] menu-closed transition-transform duration-200 ease-in-out z-40 bg-[#121212] md:hidden"
+        >
+          <div
+            class="flex flex-col justify-around items-start h-screen w-screen px-4 py-18"
+          >
+            <div
+              class="flex flex-row justify-between items-center gap-32 mx-auto"
+            >
+              <div class="flex flex-col items-start space-y-7 ml-3">
+                <!-- nav for mobile -->
+                <h3 class="text-gray-500 text-[15px]">Menu</h3>
+                <a
+                  id="about-nav"
+                  href="#about"
+                  class="hover:text-red-400 transition duration-200 cursor-pointer"
+                  >About</a
+                >
+                <a
+                  id="projects-nav"
+                  href="#projects"
+                  class="hover:text-red-400 transition duration-200 cursor-pointer"
+                  >Projects</a
+                >
+                <a
+                  id="skills-nav"
+                  href="#skills"
+                  class="hover:text-red-400 transition duration-200 cursor-pointer"
+                  >Skills</a
+                >
+                <a
+                  id="contact-nav"
+                  href="#contact"
+                  class="hover:text-red-400 transition duration-200 cursor-pointer"
+                  >Contact</a
+                >
+              </div>
+              <!-- socials -->
+              <div
+                class="flex flex-col items-start text-[18px] space-y-7 text-center"
+              >
+                <h3 class="text-gray-500 text-[15px]">Socials</h3>
+                <a
+                  id="linkedin"
+                  href="#"
+                  target="_blank"
+                  class="underline hover:text-white transition duration-300"
+                  >LinkedIn</a
+                >
+                <a
+                  id="github"
+                  href="https://github.com/Ayungcodes"
+                  target="_blank"
+                  class="underline hover:text-white transition duration-300"
+                  >GitHub</a
+                >
+                <a
+                  id="twitter"
+                  href="https://x.com/Ayungclassics"
+                  target="_blank"
+                  class="underline hover:text-white transition duration-300"
+                  >Twitter/X</a
+                >
+                <a
+                  id="instagram"
+                  href="https://www.instagram.com/ayungclassic/"
+                  target="_blank"
+                  class="underline hover:text-white transition duration-300"
+                  >Instagram</a
+                >
+              </div>
+            </div>
+
+            <div class="mx-auto">
+              <a
+                id="hire-nav"
+                href="#hire"
+                class="py-1 px-7 rounded-4xl bg-red-400 text-gray-300 hover:bg-red-500 hover:text-white transition duration-300 cursor-pointer"
+                >Hire Me</a
+              >
+            </div>
+            <!-- footer for mobile menu area -->
+            <div
+              class="absolute bottom-0 flex items-center w-screen h-10 p-2 border-gray-800 text-[13px] lg:justify-center md:text-xl botttom-0"
+            >
+              <h2 class="text-gray-300">
+                Crafted by <span class="text-red-400">Gaius Emmanuel.</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Welcome section -->
+      <section id="welcom-sec" class="h-[100vh] w-screen">
+        <div
+          class="h-full w-full flex flex-col justify-center items-center space-y-15 md:space-y-20 text-gray-300"
+        >
+          <h2 class="text-2xl tracking-tight md:text-2xl">Hi there!</h2>
+          <div class="flex flex-col justify-center items-center space-y-3">
+            <h1 class="text-2xl tracking-tight md:text-3xl">
+              I'm <span class="font-semibold">Gaius Emmanuel</span>
+            </h1>
+            <h3
+              class="text-gray-400 mx-8 text-lg text-center tracking-tight md:text-xl"
+            >
+              <i
+                >A <span class="text-red-400">Frontend Developer</span> with a
+                passion for clean code and seamless user experience.</i
+              >
+            </h3>
+            <a
+              href="./mycv.pdf"
+              target="_blank"
+              class="py-1 px-10 bg-gray-500 text-gray-950 rounded-3xl hover:bg-gray-300 transition duration-200 md:text-xl mt-7"
+              >Check out my resume</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- About section -->
+      <section id="about" class="h-[100vh] w-[100vw] mt-40">
+        <div
+          class="h-full w-full mx-auto flex flex-col items-center justify-center text-gray-300 space-y-8 lg:space-y-0 lg:flex-row-reverse lg:justify-between rounded-3xl"
+        >
+          <div
+            class="w-70 border-2 border-red-400 lg:w-350 md:w-80 mt-16 lg:mr-5"
+          >
+            <img
+              src="./photo/D3967773-10B1-4109-B866-EA09DE1D0D48.JPG"
+              alt="My Photo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="space-y-5 tracking-tight">
+            <h1
+              class="text-center font-bold text-3xl underline underline-offset-10 decoration-red-400 md:text-4xl"
+            >
+              About Me
+            </h1>
+            <div class="text-lg space-y-5 mx-6 selection:bg-red-400 md:text-xl">
+              <p>
+                As a driven and innovative front-end developer with over 2 years
+                of experience, I specialize in crafting captivating user
+                interfaces that blend functionality with flawless design. With a
+                strong foundation in modern CSS frameworks, JavaScript and
+                React, I expertly bridge the gap between aesthetics and
+                functionality, delivering seamless web experiences that engage
+                and inspire.
+              </p>
+
+              <p>
+                Passionate about staying at the forefront of industry trends, I
+                continually expand my skill set to incorporate cutting-edge
+                technologies and best practices. My expertise spans responsive
+                design, component-driven development, and efficient coding
+                methodologies. With a keen eye for detail and dedication to
+                precision, I consistently deliver high-quality solutions that
+                exceed client expectations.
+              </p>
+
+              <p>
+                Collaboration and continuous learning are at the core of my
+                approach. I thrive in team environments, sharing knowledge and
+                expertise to drive collective growth. With a portfolio
+                showcasing diverse projects and a relentless pursuit of
+                excellence, I'm committed to pushing the boundaries of what's
+                possible in front-end development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured projects -->
+      <section
+        id="projects"
+        class="bg-gray-900 mt-50 rounded-3xl shadow-2xl py-5"
+      >
+        <div class="w-full h-full space-y-7">
+          <div
+            class="pt-9 flex flex-col gap-4 justify-center items-center tracking-tight"
+          >
+            <h1
+              class="text-3xl font-bold text-gray-300 text-center underline underline-offset-10 decoration-red-400 md:text-4xl"
+            >
+              Featured Projects
+            </h1>
+            <p
+              class="text-lg text-center text-gray-300 mx-4 md:mx-8 md:text-2xl"
+            >
+              I love turning ideas into interactive, user-friendly experiences.
+              These projects highlight my growth, creativity, and ability to
+              bring concepts to life on the web.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap justify-center items-center mx-auto space-x-5 space-y-5 text-center text-gray-800"
+          >
+            <div class="w-[325px] h-[355px] bg-gray-800 m-2 rounded-3xl">
+              <img
+                src="./photo/Screenshot (16).png"
+                alt="luxury watch store"
+                class="w-full object-contain"
+              />
+              <div
+                class="text-gray-300 flex flex-col items-center my-3.5 gap-2 text-center mx-2"
+              >
+                <h1 class="font-semibold text-[17px]">
+                  Luxury Watch E-Commerce Website
+                </h1>
+                <p class="text[15px]">
+                  A sleek luxury watch shop built with React and Tailwind CSS —
+                  clean, smooth, and made to feel as refined as the watches
+                  themselves.
+                </p>
+                <a
+                  href="https://luxury-watch-shop-neon.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-5 bg-gray-500 text-gray-800 rounded-full hover:bg-gray-300 transition duration-200 md:px-7 lg:px-10 lg:text-lg cursor-pointer"
+                  >View</a
+                >
+              </div>
+            </div>
+
+            <div class="w-[325px] h-[355px] bg-gray-800 m-2 rounded-3xl">
+              <img
+                src="./photo/Screenshot (48).png"
+                alt="luxury watch store"
+                class="w-full object-cover"
+              />
+              <div
+                class="text-gray-300 flex flex-col items-center my-3.5 gap-2 text-center mx-2"
+              >
+                <h1 class="font-semibold text-[17px]">The Cookie Jar</h1>
+                <p class="text[15px]">
+                  The Cookie Jar is a playful, responsive cookie shop built with
+                  Vanilla JavaScript and TailwindCSS.
+                </p>
+                <a
+                  href="https://cookie-jar-mu.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-5 bg-gray-500 text-gray-800 rounded-full hover:bg-gray-300 transition duration-200 md:px-7 lg:px-10 lg:text-lg cursor-pointer"
+                  >View</a
+                >
+              </div>
+            </div>
+
+            <div class="w-[325px] h-[355px] bg-gray-800 m-3 rounded-3xl">
+              <img
+                src="./photo/Screenshot (65).png"
+                alt="luxury watch store"
+                class="w-full object-cover"
+              />
+              <div
+                class="text-gray-300 flex flex-col items-center my-3.5 gap-2 text-center mx-2"
+              >
+                <h1 class="font-semibold text-[17px]">
+                  Rock, Paper Scissors Game
+                </h1>
+                <p class="text[15px]">
+                  A modern take on Rock, Paper, Scissors — built with Vanilla JS
+                  and TailwindCSS, with scores saved using localStorage.
+                </p>
+                <a
+                  href="https://rock-paper-scissors-two-swart.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-5 bg-gray-500 text-gray-800 rounded-full hover:bg-gray-300 transition duration-200 md:px-7 lg:px-10 lg:text-lg cursor-pointer"
+                  >View</a
+                >
+              </div>
+            </div>
+
+            <div class="w-[325px] h-[355px] bg-gray-800 m-3 rounded-3xl">
+              <video
+                preload="metadata"
+                autoplay
+                muted 
+                loop
+                playsinline
+                class="w-full object-cover"
+              >
+                <source src="./photo/savora-demo.mp4" type="video/mp4">
+                <source src="./photo/restaurant-site - Google Chrome 2025-10-22 14-10-14.webm" type="video/webm">
+            </video>
+              <div
+                class="text-gray-300 flex flex-col items-center my-3 gap-2 text-center mx-2"
+              >
+                <h1 class="font-semibold text-[17px]">
+                  Savora Restaurant
+                </h1>
+                <p class="text[15px]">
+                  A sleek React and Tailwind build that blends minimalist aesthetics, luxury feel, and smooth animated interactions.
+                </p>
+                <a
+                  href="https://savora-restaurant.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-5 bg-gray-500 text-gray-800 rounded-full hover:bg-gray-300 transition duration-200 md:px-7 lg:px-10 lg:text-lg cursor-pointer"
+                  >View</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center pb-4">
+            <a
+              href="#"
+              class="mx-auto px-15 py-1 bg-gray-500 rounded-full hover:bg-gray-300 transition duration-200 lg:px-25 lg:text-lg"
+              >View All</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="w-screen mt-70">
+        <div
+          class="flex flex-col rounded-3xl justify-center items-center mx-auto w-screen shadow-2xl bg-gray-900 h-full p-8 space-y-10 lg:w-[75vw]"
+        >
+          <div
+            class="pt-13 flex flex-col gap-4 justify-center items-center tracking-tight"
+          >
+            <h1
+              class="text-3xl font-bold text-gray-300 text-center md:text-4xl underline underline-offset-10 decoration-red-400"
+            >
+              Technologies I Use
+            </h1>
+            <p
+              class="text-lg text-center text-gray-300 space-y-4 mx-2 tracking-tight md:text-2xl"
+            >
+              These are the tools and technologies I work with to design, build,
+              and deploy efficient, scalable, and user-friendly applications.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap justify-evenly items-center mx-auto text-sm md:text-[18px] lg:text-lg text-center text-gray-400"
+          >
+            <div
+              class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"
+            >
+              <img class="w-full" src="./photo/html-5.png" alt="HTML5" />HTML5
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"
+            >
+              <img class="w-full" src="./photo/css-3.png" alt="CSS3" />CSS3
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"
+            >
+              <img class="w-full" src="./photo/js.png" alt="JS" />JS
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"
+            >
+              <img
+                class="w-full"
+                src="./photo/icons8-tailwind-css-100.png"
+                alt="Tailwind"
+              />Tailwind
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"
+            >
+              <img class="w-full" src="./photo/react.png" alt="React" />React
+            </div>
+            <div
+              class="flex flex-col justify-center items-center shadow-2xl cursor-pointer hover:text-white transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] bg-gray-700 m-3 rounded-2xl p-3"
+            >
+              <img
+                class="w-full"
+                src="./photo/icons8-git-48.png"
+                alt="Git"
+              />Git
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center shadow-2xl h-43 w-78 rounded-4xl text-center text-md mb-5 bg-gray-800 text-gray-300 md:w-105"
+          >
+            <div class="py-2 space-y-0.5 mx-3 tracking-tight">
+              <h2 class="text-md font-semibold md:text-2xl">Always Learning</h2>
+              <p class="md:text-xl">
+                Learning never stops. I make it a habit to push beyond my
+                comfort zone, experiment with new ideas, and expand my knowledge
+                to deliver better solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="hire" class="w-screen mt-50 text-gray-300">
+        <div
+          class="h-full w-screen p-6 bg-gray-900 flex flex-col justify-center py-7 items-start mx-auto shadow-2xl space-y-4 rounded-3xl lg:w-[75vw]"
+        >
+          <h1
+            class="text-3xl text-gray-300 font-bold mt-10 mb-7 tracking-tight md:text-4xl underline underline-offset-10 decoration-red-400"
+          >
+            Let's Connect
+          </h1>
+          <div>
+            <div class="flex flex-row items-center gap-2">
+              <i class="fa-regular fa-id-badge text-3xl md:text-4xl"></i>
+              <div class="lg:text-lg -space-y-1">
+                <h2 class="text-lg md:text-2xl tracking-tight">
+                  Gaius Emmanuel
+                </h2>
+                <h3 class="text-md md:text-xl text-gray-500">
+                  Frontend Web Developer
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex flex-row items-center gap-2">
+              <i class="fa-regular fa-user text-3xl mdtext-4xl"></i>
+              <div class="lg:text-lg">
+                <div class="flex flex-col -space-y-1">
+                  <a
+                    href="mailto:gaiusemmanuel12@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="relative group inline-block md:text-center text-lg md:text-2xl"
+                    >
+                      <span class="transition-all duration-150 hover:text-white"
+                        >gaiusemmanuel12@gmail.com</span
+                      >
+                      <!-- <span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span> -->
+                    </div>
+                  </a>
+                  <a
+                    href="tel:+2347011372616"
+                    rel="noopener noreferrer"
+                    class=""
+                  >
+                    <div
+                      class="relative group inline-block text-lg md:text-2xl"
+                    >
+                      <span class="transition-all duration-150 hover:text-white"
+                        >+234 701 137 2616</span
+                      >
+                      <!-- <span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-red-400 transition-all duration-500 ease-in-out group-hover:w-full"></span> -->
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <div class="space-y-3 mt-3 mb-6">
+            <h2 class="text-xl text-gray-300 font-semibold md:text-2xl">
+              Check me out on:
+            </h2>
+            <div class="flex flex-row justify-between items-center">
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i
+                  class="fa-brands fa-square-linkedin text-5xl hover:text-[#0077B5] transition duration-200"
+                ></i
+              ></a>
+              <a
+                href="https://github.com/Ayungcodes"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i
+                  class="fa-brands fa-square-github text-5xl hover:text-gray-600 transition duration-200"
+                ></i
+              ></a>
+              <a
+                href="https://x.com/Ayungclassics"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i
+                  class="fa-brands fa-square-x-twitter text-5xl hover:text-gray-600 transition duration-200"
+                ></i
+              ></a>
+              <a
+                href="https://www.instagram.com/ayungclassic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i
+                  class="fa-brands fa-square-instagram text-5xl hover:text-[#E4405F] transition duration-200"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form section -->
+      <section id="contact" class="w-screen mt-40 text-gray-300">
+        <div
+          class="mx-auto w-screen h-full p-12 bg-gray-900 shadow-2xl rounded-3xl lg:w-[75vw]"
+        >
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/mrbarzay"
+            method="POST"
+            class="flex flex-col items-center space-y-8 mt-7"
+          >
+            <h2 class="text-left text-2xl text-red-400 font-bold md:text-4xl">
+              Shoot a message
+            </h2>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              class="rounded-lg w-70 md:w-85 p-2 bg-gray-950"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Adress"
+              class="rounded-lg w-70 md:w-85 p-2 bg-gray-950"
+              required
+            />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your message..."
+              class="rounded-xl p-2 w-70 md:w-85 h-20 bg-gray-950"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="py-1 px-20 bg-red-400 hover:bg-red-500 cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl"
+            >
+              Shoot
+            </button>
+            <div>
+              <p id="status-message" class="text-center text-xl"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-screen shadow-2xl">
+      <div
+        class="flex items-center w-screen h-full p-7 bg-black border-t-2 border-b-1 border-gray-800 text-sm mt-30 lg:justify-center md:text-xl"
+      >
+        <h2 class="text-gray-300">
+          Crafted by <span class="text-red-400">Gaius Emmanuel.</span>
+        </h2>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
