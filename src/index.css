@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Space Grotesk", Helvetica, sans-serif;
+  scroll-behavior: auto;
+}
+
+/* Light mode */
+.light {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* Dark mode */
+.dark {
+  background-color: #000;
+  color: #ffffff;
+}
+
+/* Transition for smoothness */
+body,
+.light,
+.dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
