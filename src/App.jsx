@@ -13,14 +13,19 @@ import cookieJar from "../src/assets/cookieJar.png";
 import luxuryWatch from "../src/assets/luxuryWatch.png";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [openNav, setOpenNav] = useState(false);
-  const [hireState, setHireState] = useState(false);
-  const [status, setStatus] = useState("idle");
+  const [state, setState] = useState({
+    darkMode: false,
+    openNav: false,
+    hireState: false,
+    status: "idle",
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("sending");
+    setState((prevState) => ({
+      ...prevState,
+      status: "sending",
+    }));
 
     const formData = new FormData(e.target);
     const response = await fetch("https://formspree.io/f/mrbarzay", {
@@ -32,10 +37,16 @@ const App = () => {
     });
 
     if (response.ok) {
-      setStatus("success");
+      setState((prevState) => ({
+        ...prevState,
+        status: "success",
+      }));
       e.target.reset();
     } else {
-      setStatus("error");
+      setState((prevState) => ({
+        ...prevState,
+        status: "error",
+      }));
     }
   };
 
@@ -77,33 +88,45 @@ const App = () => {
   };
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
+    setState((prevState) => ({
+      ...prevState,
+      darkMode: !prevState.darkMode,
+    }));
   };
 
   const toggleNav = () => {
-    setOpenNav(!openNav);
+    setState((prevState) => ({
+      ...prevState,
+      openNav: !prevState.openNav,
+    }));
   };
 
   const handleHireTrue = () => {
-    setHireState(true);
+    setState((prevState) => ({
+      ...prevState,
+      hireState: !prevState.hireState,
+    }));
   };
 
   const handleHireFalse = () => {
     setTimeout(() => {
-      setHireState(false);
+      setState((prevState) => ({
+        ...prevState,
+        hireState: false,
+      }));
     }, 3000);
   };
 
   return (
     <div
       className={`${
-        darkMode ? "dark text-white" : "light text-stone-800"
+        state.darkMode ? "dark text-white" : "light text-stone-800"
       } min-h-screen max-w-[100vw] overflow-x-hidden selection:bg-[#635bff]`}
     >
       {/* navigation area */}
       <nav
         className={`${
-          darkMode ? "bg-black/50" : "bg-[light]/80"
+          state.darkMode ? "bg-black/50" : "bg-[light]/80"
         } py-4 w-screen flex items-center fixed backdrop-blur-sm z-9999`}
       >
         <div className="flex items-center justify-between mx-6 w-screen">
@@ -115,7 +138,9 @@ const App = () => {
             className="font-[fredoka] text-xl md:text-3xl transition-transform duration-200 hover:scale-105 z-99999"
           >
             <span
-              className={`${darkMode ? "text-[#635bff]" : "text-[#635bff]"}`}
+              className={`${
+                state.darkMode ? "text-[#635bff]" : "text-[#635bff]"
+              }`}
             >
               Bapyat
             </span>
@@ -172,10 +197,10 @@ const App = () => {
               className={`flex items-center md:text-2xl gap-2
         px-3 py-1 rounded-2xl font-medium
         transition-colors duration-300 cursor-pointer ${
-          darkMode ? "bg-gray-50 text-black" : "bg-black text-white"
+          state.darkMode ? "bg-gray-50 text-black" : "bg-black text-white"
         }`}
             >
-              {darkMode ? "🌞 Light" : "🌙 Dark"}
+              {state.darkMode ? "🌞 Light" : "🌙 Dark"}
             </button>
 
             {/* toggleBtn */}
@@ -185,16 +210,16 @@ const App = () => {
             >
               <span
                 className={`${
-                  darkMode ? "bg-white" : "bg-black"
+                  state.darkMode ? "bg-white" : "bg-black"
                 } h-[2px] w-7 block rounded-full transition-all duration-200 ${
-                  openNav ? "rotate-45" : "rotate-0"
+                  state.openNav ? "rotate-45" : "rotate-0"
                 }`}
               ></span>
               <span
                 className={`${
-                  darkMode ? "bg-white" : "bg-black"
+                  state.darkMode ? "bg-white" : "bg-black"
                 } h-[2px] w-[19px] block rounded-full transition-all duration-200 ${
-                  openNav ? "-rotate-45" : "rotate-0"
+                  state.openNav ? "-rotate-45" : "rotate-0"
                 }`}
               ></span>
             </button>
@@ -204,9 +229,9 @@ const App = () => {
 
         <div
           className={`fixed top-0 w-full h-screen transition-all duration-300 ease-linear z-9999 text-[18px] md:text-2xl ${
-            darkMode ? "bg-black/80" : "bg-gray-100/80"
+            state.darkMode ? "bg-black/80" : "bg-gray-100/80"
           } ${
-            openNav
+            state.openNav
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
           }`}
@@ -218,7 +243,7 @@ const App = () => {
                   {/* nav for mobile */}
                   <h3
                     className={`text-[16px] md:text-[18px] ${
-                      darkMode ? "text-gray-300" : "text-black"
+                      state.darkMode ? "text-gray-300" : "text-black"
                     }`}
                   >
                     Menu
@@ -226,7 +251,7 @@ const App = () => {
                   <button
                     onClick={() => {
                       scrollToWelcome();
-                      setOpenNav(false);
+                      setState((state.openNav = false));
                     }}
                     className="hover:opacity-80 transition duration-200 cursor-pointer"
                   >
@@ -235,7 +260,7 @@ const App = () => {
                   <button
                     onClick={() => {
                       scrollToAbout();
-                      setOpenNav(false);
+                      setState((state.openNav = false));
                     }}
                     className="hover:opacity-80 transition duration-200 cursor-pointer"
                   >
@@ -244,7 +269,7 @@ const App = () => {
                   <button
                     onClick={() => {
                       scrollToProjects();
-                      setOpenNav(false);
+                      setState((state.openNav = false));
                     }}
                     className="hover:opacity-80 transition duration-200 cursor-pointer"
                   >
@@ -253,7 +278,7 @@ const App = () => {
                   <button
                     onClick={() => {
                       scrollToSkills();
-                      setOpenNav(false);
+                      setState((state.openNav = false));
                     }}
                     className="hover:opacity-80 transition duration-200 cursor-pointer"
                   >
@@ -262,7 +287,7 @@ const App = () => {
                   <button
                     onClick={() => {
                       scrollToContact();
-                      setOpenNav(false);
+                      setState((state.openNav = false));
                     }}
                     className="hover:opacity-80 transition duration-200 cursor-pointer"
                   >
@@ -273,7 +298,7 @@ const App = () => {
                 <div className="flex flex-col items-start space-y-7 text-center">
                   <h3
                     className={`text-[16px] md:text-[18px] ${
-                      darkMode ? "text-gray-300" : "text-black"
+                      state.darkMode ? "text-gray-300" : "text-black"
                     }`}
                   >
                     Socials
@@ -325,10 +350,12 @@ const App = () => {
                 <button
                   onClick={() => {
                     scrollToContact();
-                    setOpenNav(false);
+                    setState((state.openNav = false));
                   }}
                   className={`py-1 px-7 md:px-12 rounded-4xl bg-[#635bff] transition duration-300 cursor-pointer ${
-                    darkMode ? "hover:opacity-80" : "hover:bg-black text-white"
+                    state.darkMode
+                      ? "hover:opacity-80"
+                      : "hover:bg-black text-white"
                   } animate-pulse`}
                 >
                   Hire Me
@@ -350,7 +377,7 @@ const App = () => {
       <div
         ref={welcomeRef}
         className={`flex flex-col space-y-16 h-[100vh] w-screen items-center justify-center ${
-          openNav ? "blur-sm" : "blur-none"
+          state.openNav ? "blur-sm" : "blur-none"
         }`}
       >
         <p className="text-2xl md:text-[26px]">Hi there!</p>
@@ -360,7 +387,7 @@ const App = () => {
           </h1>
           <p
             className={`mx-8 text-lg text-center tracking-tight md:text-[22px] leading-7 ${
-              darkMode ? "text-gray-300" : "text-black"
+              state.darkMode ? "text-gray-300" : "text-black"
             }`}
           >
             A{" "}
@@ -373,7 +400,7 @@ const App = () => {
             <button
               onClick={scrollToProjects}
               className={`py-1 px-8 bg-[#635bff] text-white rounded-3xl transition-all duration-200 md:text-xl mt-7 hover:scale-95 ${
-                darkMode ? "hover:opacity-80" : "hover:bg-black"
+                state.darkMode ? "hover:opacity-80" : "hover:bg-black"
               } animate-pulse`}
             >
               View Projects
@@ -384,7 +411,7 @@ const App = () => {
             <button
               onClick={scrollToContact}
               className={`py-1 px-8 border-[1.5px] border-[#635bff] rounded-3xl transition-all duration-200 md:text-xl mt-7 hover:scale-95 ${
-                darkMode ? "hover:opacity-80" : "hover:opacity-80"
+                state.darkMode ? "hover:opacity-80" : "hover:opacity-80"
               } animate-pulse`}
             >
               Hire Me
@@ -397,8 +424,8 @@ const App = () => {
       <div
         ref={aboutRef}
         className={`${
-          darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 pb-32 shadow-md ${openNav ? "blur-sm" : "blur-none"}`}
+          state.darkMode ? "bg-black" : "bg-gray-100"
+        } py-14 pb-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <h1 className="text-center font-semibold text-3xl underline underline-offset-10 decoration-[#635bff] md:text-[36px] py-7">
           Developer in Focus
@@ -437,7 +464,7 @@ const App = () => {
           {/* photo card */}
           <div
             className={`flex flex-col justify-center space-y-1.5 items-center h-[60vh] md:h-[62vh] w-[90%] lg:w-[45%] lg:h-[60vh] ${
-              darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+              state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
             } mx-auto mt-32 shadow-sm rounded-2xl`}
           >
             <div className="relative h-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] w-[180px]">
@@ -450,7 +477,7 @@ const App = () => {
               />
               <div
                 className={`absolute top-1/2 left-1/2 flex justify-center items-center -translate-x-1/2 -translate-y-1/2 text-center transition-all ease-in-out duration-500 ${
-                  hireState
+                  state.hireState
                     ? "opacity-100 bg-black/50 h-[180px] w-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] border-[1.5px] border-[#635bff] rounded-full"
                     : "h-0 opacity-0"
                 }`}
@@ -481,8 +508,8 @@ const App = () => {
       <div
         ref={projectsRef}
         className={`${
-          darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 shadow-md mt-40 ${openNav ? "blur-sm" : "blur-none"}`}
+          state.darkMode ? "bg-black" : "bg-gray-100"
+        } py-14 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <div className="flex flex-col space-y-6">
           <h1 className="text-3xl font-semibold text-center underline underline-offset-10 decoration-[#635bff] md:text-[36px]">
@@ -592,7 +619,9 @@ const App = () => {
               id="hire-nav"
               href="#hire"
               className={`py-1 px-7 md:text-xl rounded-4xl bg-[#635bff] transition duration-300 cursor-pointer ${
-                darkMode ? "hover:opacity-80" : "hover:bg-black text-white"
+                state.darkMode
+                  ? "hover:opacity-80"
+                  : "hover:bg-black text-white"
               } animate-pulse`}
             >
               View All
@@ -605,8 +634,8 @@ const App = () => {
       <div
         ref={skillsRef}
         className={`${
-          darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 shadow-md mt-40 ${openNav ? "blur-sm" : "blur-none"}`}
+          state.darkMode ? "bg-black" : "bg-gray-100"
+        } py-14 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <div className="flex flex-col justify-center items-center space-y-6 mx-6">
           <div className="flex flex-col gap-4 justify-center items-center tracking-tight">
@@ -622,7 +651,7 @@ const App = () => {
           <div className="flex flex-wrap justify-evenly items-center text-sm md:text-[16px]">
             <div
               className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
             >
               <img className="w-full" src={htmlIcon} alt="HTML5" />
@@ -631,7 +660,7 @@ const App = () => {
 
             <div
               className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
             >
               <img className="w-full" src={cssIcon} alt="CSS3" />
@@ -640,7 +669,7 @@ const App = () => {
 
             <div
               className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
             >
               <img className="w-full" src={jsIcon} alt="JS" />
@@ -649,7 +678,7 @@ const App = () => {
 
             <div
               className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
             >
               <img className="w-full" src={tailwindIcon} alt="Tailwind" />
@@ -658,7 +687,7 @@ const App = () => {
 
             <div
               className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
             >
               <img className="w-full" src={reactIcon} alt="React" />
@@ -666,7 +695,7 @@ const App = () => {
             </div>
             <div
               className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
             >
               <img className="w-full" src={gitIcon} alt="Git" />
@@ -676,7 +705,7 @@ const App = () => {
 
           <div
             className={`flex flex-col justify-center items-center shadow-sm h-40 w-[87vw] rounded-4xl text-center text-md md:h-48 md:w-[440px] transition-all duration-200 hover:scale-105 ${
-              darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+              state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
             }`}
           >
             <div className="py-3 space-y-0.5 mx-3">
@@ -697,8 +726,8 @@ const App = () => {
       <div
         ref={contactRef}
         className={`${
-          darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 mt-32 shadow-md ${openNav ? "blur-sm" : "blur-none"}`}
+          state.darkMode ? "bg-black" : "bg-gray-100"
+        } py-14 mt-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <div className="flex flex-col space-y-5 items-center justify-center mx-6">
           <h1 className="text-3xl md:text-[36px] font-semibold underline underline-offset-10 decoration-[#635bff]">
@@ -713,10 +742,10 @@ const App = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center space-y-7 lg:flex-row lg:space-x-14">
-          <div className="flex flex-col space-y-8 items-center justify-center h-[48vh] w-[90%] lg:w-[37vw]">
+          <div className="flex flex-col space-y-8 items-center justify-center h-[48vh] w-[92%] md:w-[90%] lg:w-[37vw]">
             <div
               className={`flex flex-col justify-center w-full h-full ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               } mx-auto mt-12 shadow-sm rounded-2xl transition-all duration-200 p-6 items-start space-y-4`}
             >
               <h1 className="text-[25px] font-semibold mt-10 mb-7 tracking-tight md:text-3xl underline underline-offset-10 decoration-[#635bff]">
@@ -725,8 +754,8 @@ const App = () => {
               <div className="-ml-1">
                 <div className="flex flex-row items-center gap-2">
                   <i className="fa-regular fa-id-badge text-3xl md:text-4xl"></i>
-                  <div className="text-lg -space-y-1">
-                    <h2 className="text-lg tracking-tight">Gaius Emmanuel</h2>
+                  <div className="text-[17px] md:text-xl -space-y-1">
+                    <h2 className="tracking-tight">Gaius Emmanuel</h2>
                     <h3 className="text-gray-600">Frontend Web Developer</h3>
                   </div>
                 </div>
@@ -735,7 +764,7 @@ const App = () => {
               <div>
                 <div className="flex flex-row items-center gap-2 -ml-1">
                   <i className="fa-regular fa-user text-[29px] md:text-4xl"></i>
-                  <div className="text-lg">
+                  <div className="text-[17px] md:text-xl">
                     <div className="flex flex-col -space-y-1">
                       <a
                         href="mailto:gaiusemmanuel12@gmail.com"
@@ -810,7 +839,7 @@ const App = () => {
               id="name"
               placeholder="Name"
               className={`rounded-xl p-2.5 w-full focus:border-0 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
               required
             />
@@ -820,7 +849,7 @@ const App = () => {
               id="email"
               placeholder="Email Adress"
               className={`rounded-xl p-2.5 w-full ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
               required
             />
@@ -829,23 +858,23 @@ const App = () => {
               id="message"
               placeholder="Let’s start the conversation..."
               className={`rounded-xl p-2.5 w-full h-28 ${
-                darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
               required
             ></textarea>
             <button
               type="submit"
-              disabled={status === "sending"}
+              disabled={state.status === "sending"}
               className="py-1 px-20 bg-[#635bff] cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl hover:scale-95 animate-pulse"
             >
-              {status === "sending" ? "Shooting..." : "Shoot"}
+              {state.status === "sending" ? "Shooting..." : "Shoot"}
             </button>
-            {status === "success" && (
+            {state.status === "success" && (
               <p className="text-green-500 text-sm mt-2">
                 Message sent successfully 🎉
               </p>
             )}
-            {status === "error" && (
+            {state.status === "error" && (
               <p className="text-red-500 text-sm mt-2">
                 Oops! Something went wrong. Try again.
               </p>
@@ -864,8 +893,8 @@ const App = () => {
       <footer className="w-screen shadow-2xl">
         <div
           className={`flex items-center w-screen h-full p-7 text-md mt-30 justify-center md:text-xl shadow-xl ${
-            darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-          } ${openNav ? "blur-sm" : "blur-none"}`}
+            state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+          } ${state.openNav ? "blur-sm" : "blur-none"}`}
         >
           <h2>©Copyright - Gaius Emmanuel 2025</h2>
         </div>
