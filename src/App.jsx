@@ -194,7 +194,7 @@ const App = () => {
             {/* toggleMenu & toggleTheme BTNs */}
             <button
               onClick={toggleTheme}
-              className={`flex items-center md:text-2xl gap-2
+              className={`flex items-center text-[15px] md:text-[20px] gap-2
         px-3 py-1 rounded-2xl font-medium
         transition-colors duration-300 cursor-pointer ${
           state.darkMode ? "bg-gray-50 text-black" : "bg-black text-white"
@@ -239,7 +239,7 @@ const App = () => {
           <div className="text-center absolute top-0 right-0 transition-transform lg:hidden">
             <div className="flex flex-col justify-around items-start h-screen w-screen py-20 md:text-xl">
               <div className="flex flex-row w-full justify-around items-center mx-auto mt-6">
-                <div className="flex flex-col items-start space-y-7">
+                <div className="flex flex-col items-start space-y-7 transition-all duration-75 hover:text-stone-500">
                   {/* nav for mobile */}
                   <h3
                     className={`text-[16px] md:text-[18px] ${
@@ -253,7 +253,7 @@ const App = () => {
                       scrollToWelcome();
                       setState((state.openNav = false));
                     }}
-                    className="hover:opacity-80 transition duration-200 cursor-pointer"
+                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     Home
                   </button>
@@ -262,7 +262,7 @@ const App = () => {
                       scrollToAbout();
                       setState((state.openNav = false));
                     }}
-                    className="hover:opacity-80 transition duration-200 cursor-pointer"
+                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     About
                   </button>
@@ -271,7 +271,7 @@ const App = () => {
                       scrollToProjects();
                       setState((state.openNav = false));
                     }}
-                    className="hover:opacity-80 transition duration-200 cursor-pointer"
+                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     Projects
                   </button>
@@ -280,7 +280,7 @@ const App = () => {
                       scrollToSkills();
                       setState((state.openNav = false));
                     }}
-                    className="hover:opacity-80 transition duration-200 cursor-pointer"
+                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     Skills
                   </button>
@@ -289,13 +289,13 @@ const App = () => {
                       scrollToContact();
                       setState((state.openNav = false));
                     }}
-                    className="hover:opacity-80 transition duration-200 cursor-pointer"
+                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     Contact
                   </button>
                 </div>
                 {/* socials */}
-                <div className="flex flex-col items-start space-y-7 text-center">
+                <div className="flex flex-col items-start space-y-7 text-center transition-all duration-75 hover:text-stone-500">
                   <h3
                     className={`text-[16px] md:text-[18px] ${
                       state.darkMode ? "text-gray-300" : "text-black"
@@ -307,7 +307,7 @@ const App = () => {
                     id="linkedin"
                     href="#"
                     target="_blank"
-                    className="underline hover:opacity-80 transition duration-300"
+                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     LinkedIn
                   </a>
@@ -315,7 +315,7 @@ const App = () => {
                     id="github"
                     href="https://github.com/Ayungcodes"
                     target="_blank"
-                    className="underline hover:opacity-80 transition duration-300"
+                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     GitHub
                   </a>
@@ -323,7 +323,7 @@ const App = () => {
                     id="twitter"
                     href="https://x.com/Ayungclassics"
                     target="_blank"
-                    className="underline hover:opacity-80 transition duration-300"
+                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     Twitter/X
                   </a>
@@ -331,7 +331,7 @@ const App = () => {
                     id="instagram"
                     href="https://www.instagram.com/ayungclassic/"
                     target="_blank"
-                    className="underline hover:opacity-80 transition duration-300"
+                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     Instagram
                   </a>
@@ -339,7 +339,7 @@ const App = () => {
                     id="fiverr"
                     href="https://www.fiverr.com/s/0bxeZ3v"
                     target="_blank"
-                    className="underline hover:opacity-80 transition duration-300"
+                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
                   >
                     Fiverr
                   </a>
@@ -804,7 +804,7 @@ const App = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-github text-[42px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
+                    <i className="fa-brands fa-github text-[42px] hover:text-gray-600 hover:scale-110 hover: transition duration-200"></i>
                   </a>
                   <a
                     href="https://x.com/Ayungclassics"
@@ -857,7 +857,7 @@ const App = () => {
               name="message"
               id="message"
               placeholder="Let’s start the conversation..."
-              className={`rounded-xl p-2.5 w-full h-28 ${
+              className={`rounded-xl p-2.5 w-full h-28 resize-none ${
                 state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               }`}
               required
@@ -865,7 +865,7 @@ const App = () => {
             <button
               type="submit"
               disabled={state.status === "sending"}
-              className="py-1 px-20 bg-[#635bff] cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl hover:scale-95 animate-pulse"
+              className={`py-1 px-20 bg-[#635bff] cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl animate-pulse ${state.darkMode ? "hover:scale-95" : "hover:scale-95 hover:bg-black hover:text-white"}`}
             >
               {state.status === "sending" ? "Shooting..." : "Shoot"}
             </button>
