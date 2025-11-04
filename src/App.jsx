@@ -127,7 +127,7 @@ const App = () => {
       <nav
         className={`${
           state.darkMode ? "bg-black/50" : "bg-[light]/80"
-        } py-4 w-screen flex items-center fixed backdrop-blur-sm z-9999`}
+        } py-5 w-screen flex items-center fixed backdrop-blur-sm z-9999`}
       >
         <div className="flex items-center justify-between mx-6 w-screen">
           {/* logo */}
@@ -253,7 +253,9 @@ const App = () => {
                       scrollToWelcome();
                       setState((state.openNav = false));
                     }}
-                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`transition duration-75 cursor-pointer ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     Home
                   </button>
@@ -262,7 +264,9 @@ const App = () => {
                       scrollToAbout();
                       setState((state.openNav = false));
                     }}
-                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`transition duration-75 cursor-pointer ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     About
                   </button>
@@ -271,7 +275,9 @@ const App = () => {
                       scrollToProjects();
                       setState((state.openNav = false));
                     }}
-                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`transition duration-75 cursor-pointer ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     Projects
                   </button>
@@ -280,7 +286,9 @@ const App = () => {
                       scrollToSkills();
                       setState((state.openNav = false));
                     }}
-                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`transition duration-75 cursor-pointer ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     Skills
                   </button>
@@ -289,7 +297,9 @@ const App = () => {
                       scrollToContact();
                       setState((state.openNav = false));
                     }}
-                    className={`transition duration-75 cursor-pointer ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`transition duration-75 cursor-pointer ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     Contact
                   </button>
@@ -307,7 +317,9 @@ const App = () => {
                     id="linkedin"
                     href="#"
                     target="_blank"
-                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`underline transition-all duration-75 ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     LinkedIn
                   </a>
@@ -315,7 +327,9 @@ const App = () => {
                     id="github"
                     href="https://github.com/Ayungcodes"
                     target="_blank"
-                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`underline transition-all duration-75 ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     GitHub
                   </a>
@@ -323,7 +337,9 @@ const App = () => {
                     id="twitter"
                     href="https://x.com/Ayungclassics"
                     target="_blank"
-                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`underline transition-all duration-75 ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     Twitter/X
                   </a>
@@ -331,7 +347,9 @@ const App = () => {
                     id="instagram"
                     href="https://www.instagram.com/ayungclassic/"
                     target="_blank"
-                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`underline transition-all duration-75 ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     Instagram
                   </a>
@@ -339,7 +357,9 @@ const App = () => {
                     id="fiverr"
                     href="https://www.fiverr.com/s/0bxeZ3v"
                     target="_blank"
-                    className={`underline transition-all duration-75 ${state.darkMode ? "hover:text-white" : "hover:text-black"}`}
+                    className={`underline transition-all duration-75 ${
+                      state.darkMode ? "hover:text-white" : "hover:text-black"
+                    }`}
                   >
                     Fiverr
                   </a>
@@ -386,7 +406,7 @@ const App = () => {
             I'm <span className="font-semibold">Gaius Emmanuel</span>
           </h1>
           <p
-            className={`mx-8 text-lg text-center tracking-tight md:text-[22px] leading-7 ${
+            className={`mx-8 md:mx-24 lg:mx-36 text-lg text-center tracking-tight md:text-[22px] leading-7 ${
               state.darkMode ? "text-gray-300" : "text-black"
             }`}
           >
@@ -396,21 +416,21 @@ const App = () => {
             </span>{" "}
             with a passion for clean code and seamless user experience.
           </p>
-          <div className="flex items-center gap-2 text-center">
+          <div className="flex items-center gap-1.5 text-center">
             <button
               onClick={scrollToProjects}
-              className={`py-1 px-8 bg-[#635bff] text-white rounded-3xl transition-all duration-200 md:text-xl mt-7 hover:scale-95 ${
+              className={`py-1 px-5 md:px-8 bg-[#635bff] text-white rounded-3xl transition-all duration-200 md:text-xl mt-7 hover:scale-95 ${
                 state.darkMode ? "hover:opacity-80" : "hover:bg-black"
               } animate-pulse`}
             >
               View Projects
             </button>
             <button onClick={scrollToAbout}>
-              <i className="fa-solid fa-arrow-down text-xl animate-bounce"></i>
+              <i className="fa-solid fa-arrow-down text-[18px] md:text-xl animate-bounce"></i>
             </button>
             <button
               onClick={scrollToContact}
-              className={`py-1 px-8 border-[1.5px] border-[#635bff] rounded-3xl transition-all duration-200 md:text-xl mt-7 hover:scale-95 ${
+              className={`py-1 px-5 md:px-8 border-[1.5px] border-[#635bff] rounded-3xl transition-all duration-200 md:text-xl mt-7 hover:scale-95 ${
                 state.darkMode ? "hover:opacity-80" : "hover:opacity-80"
               } animate-pulse`}
             >
@@ -425,9 +445,9 @@ const App = () => {
         ref={aboutRef}
         className={`${
           state.darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 pb-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
+        } py-14 pb-28 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
-        <h1 className="text-center font-semibold text-3xl underline underline-offset-10 decoration-[#635bff] md:text-[36px] py-7">
+        <h1 className="text-center font-semibold text-3xl underline underline-offset-10 decoration-[#635bff] md:text-[36px] py-7 tracking-tight">
           Developer in Focus
         </h1>
         <div className="lg:mx-14 flex flex-col items-center justify-center lg:space-y-0 -space-y-16 lg:flex-row lg:justify-around rounded-3xl">
@@ -463,7 +483,7 @@ const App = () => {
 
           {/* photo card */}
           <div
-            className={`flex flex-col justify-center space-y-1.5 items-center h-[60vh] md:h-[62vh] w-[90%] lg:w-[45%] lg:h-[60vh] ${
+            className={`flex flex-col justify-center space-y-1.5 items-center h-[59vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[60vh] ${
               state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
             } mx-auto mt-32 shadow-sm rounded-2xl`}
           >
@@ -496,7 +516,7 @@ const App = () => {
             <h2 className="-mt-1 text-[#635bff] font-semibold text-[20px] md:text-[24px]">
               Frontend Web Developer
             </h2>
-            <p className="text-center mx-4 -mt-1 text-lg md:text-xl">
+            <p className="text-center mx-8 md:mx-16 -mt-1 text-lg md:text-xl">
               I turn ideas into smooth, interactive experiences. Code is my
               language and the browser is my canvas.
             </p>
@@ -509,16 +529,15 @@ const App = () => {
         ref={projectsRef}
         className={`${
           state.darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
+        } py-20 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <div className="flex flex-col space-y-6">
-          <h1 className="text-3xl font-semibold text-center underline underline-offset-10 decoration-[#635bff] md:text-[36px]">
+          <h1 className="text-3xl font-semibold text-center underline underline-offset-10 decoration-[#635bff] md:text-[36px] tracking-tight">
             Featured Projects
           </h1>
-          <p className="text-center mx-4 lg:mx-8 text-lg md:text-xl">
-            I love turning ideas into interactive, user-friendly experiences.
-            These projects highlight my growth, creativity, and ability to bring
-            concepts to life on the web.
+          <p className="text-center mx-8 md:mx-24 lg:mx-36 text-lg md:text-xl">
+            I craft ideas into seamless, user-friendly experiences that bring
+            creativity and purpose to life on the web.
           </p>
         </div>
 
@@ -635,14 +654,14 @@ const App = () => {
         ref={skillsRef}
         className={`${
           state.darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
+        } py-20 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <div className="flex flex-col justify-center items-center space-y-6 mx-6">
           <div className="flex flex-col gap-4 justify-center items-center tracking-tight">
-            <h1 className="text-3xl font-semibold text-center underline underline-offset-10 decoration-[#635bff] md:text-[36px]">
+            <h1 className="text-3xl font-semibold text-center underline underline-offset-10 decoration-[#635bff] md:text-[36px] tracking-tight">
               Technologies I Use
             </h1>
-            <p className="text-lg text-center tracking-tight md:text-xl">
+            <p className="text-lg text-center tracking-tight md:text-xl mx-8 md:mx-24 lg:mx-36">
               These are the tools and technologies I work with to design, build,
               and deploy efficient, scalable, and user-friendly applications.
             </p>
@@ -727,13 +746,13 @@ const App = () => {
         ref={contactRef}
         className={`${
           state.darkMode ? "bg-black" : "bg-gray-100"
-        } py-14 mt-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
+        } py-20 mt-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <div className="flex flex-col space-y-5 items-center justify-center mx-6">
-          <h1 className="text-3xl md:text-[36px] font-semibold underline underline-offset-10 decoration-[#635bff]">
+          <h1 className="text-3xl md:text-[36px] font-semibold underline underline-offset-10 decoration-[#635bff] tracking-tight">
             Let’s Create Magic
           </h1>
-          <p className="text-center text-lg md:text-xl lg:mx-36">
+          <p className="text-center text-lg md:text-xl mx-8 md:mx-24 lg:mx-36">
             Creativity isn’t just a skill — it’s an energy. Together, we’ll
             channel that energy into something beautiful, bold, and alive. I’ll
             take your vision and code it into reality, blending art and tech to
@@ -742,84 +761,92 @@ const App = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center space-y-7 lg:flex-row lg:space-x-14">
-          <div className="flex flex-col space-y-8 items-center justify-center h-[48vh] w-[92%] md:w-[90%] lg:w-[37vw]">
+          <div className="flex flex-col space-y-8 items-center justify-center h-[36vh] lg:h-[38vh] w-[92%] md:w-[90%] lg:w-[40vw]">
             <div
               className={`flex flex-col justify-center w-full h-full ${
                 state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
               } mx-auto mt-12 shadow-sm rounded-2xl transition-all duration-200 p-6 items-start space-y-4`}
             >
-              <h1 className="text-[25px] font-semibold mt-10 mb-7 tracking-tight md:text-3xl underline underline-offset-10 decoration-[#635bff]">
-                Let's Connect
-              </h1>
-              <div className="-ml-1">
-                <div className="flex flex-row items-center gap-2">
-                  <i className="fa-regular fa-id-badge text-3xl md:text-4xl"></i>
-                  <div className="text-[17px] md:text-xl -space-y-1">
-                    <h2 className="tracking-tight">Gaius Emmanuel</h2>
-                    <h3 className="text-gray-600">Frontend Web Developer</h3>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex flex-row items-center gap-2 -ml-1">
-                  <i className="fa-regular fa-user text-[29px] md:text-4xl"></i>
-                  <div className="text-[17px] md:text-xl">
-                    <div className="flex flex-col -space-y-1">
-                      <a
-                        href="mailto:gaiusemmanuel12@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="group">
-                          <span className="transition-all duration-300 hover:opacity-65">
-                            gaiusemmanuel12@gmail.com
-                          </span>
-                        </div>
-                      </a>
-                      <a
-                        href="tel:+2347011372616"
-                        rel="noopener noreferrer"
-                        className=""
-                      >
-                        <div className="group">
-                          <span className="transition-all duration-300 hover:opacity-65">
-                            +234 701 137 2616
-                          </span>
-                        </div>
-                      </a>
+              <div className="flex flex-col justify-center md:mx-5 lg:mx-0 space-y-3 mt-4">
+                <h1 className="text-[25px] font-semibold tracking-tight md:text-3xl">
+                  Let's Connect
+                </h1>
+                <div>
+                  <div className="flex flex-row items-center gap-2">
+                    <i className="fa-regular fa-id-badge text-3xl md:text-4xl"></i>
+                    <div className="text-[18px] md:text-xl -space-y-1">
+                      <h2 className="tracking-tight">Gaius Emmanuel</h2>
+                      <h3 className="text-gray-600 text-[15px] md:text-[18px]">
+                        Frontend Web Developer
+                      </h3>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Socials */}
-              <div className="mt-3 mb-6">
-                <div className="-ml-2">
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <i className="fa-brands fa-linkedin text-[42px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
-                  </a>
-                  <a
-                    href="https://github.com/Ayungcodes"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fa-brands fa-github text-[42px] hover:text-gray-600 hover:scale-110 hover: transition duration-200"></i>
-                  </a>
-                  <a
-                    href="https://x.com/Ayungclassics"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fa-brands fa-x-twitter text-[42px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/ayungclassic/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fa-brands fa-instagram text-[42px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
-                  </a>
+                <div>
+                  <div className="flex flex-row items-center gap-2">
+                    <i className="fa-regular fa-user text-[29px] md:text-4xl"></i>
+                    <div className="text-[16px] md:text-xl">
+                      <div className="flex flex-col -space-y-1">
+                        <a
+                          href="mailto:gaiusemmanuel12@gmail.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="group">
+                            <span className="transition-all duration-300 hover:opacity-65">
+                              gaiusemmanuel12@gmail.com
+                            </span>
+                          </div>
+                        </a>
+                        <a
+                          href="tel:+2347011372616"
+                          rel="noopener noreferrer"
+                          className=""
+                        >
+                          <div className="group">
+                            <span className="transition-all duration-300 hover:opacity-65">
+                              +234 701 137 2616
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Socials */}
+                <div className="mt-3 mb-6">
+                  <div className="">
+                    <a
+                      href="https://www.linkedin.com/in/gaius-emmanuel-b10279202/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fa-brands fa-linkedin text-[32px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Ayungcodes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fa-brands fa-github text-[32px] hover:text-gray-600 hover:scale-110 hover: transition duration-200"></i>
+                    </a>
+                    <a
+                      href="https://x.com/Ayungclassics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fa-brands fa-x-twitter text-[32px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/ayungclassic/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fa-brands fa-instagram text-[32px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -828,44 +855,50 @@ const App = () => {
           {/* contact form */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col items-center space-y-8 mt-9 w-[90%] lg:w-[35vw]"
+            className="flex flex-col space-y-8 mt-9 w-[90%] lg:w-[28vw]"
           >
-            <h2 className="text-left text-[25px] font-semibold md:text-3xl underline underline-offset-10 decoration-[#635bff]">
+            <h2 className="text-left text-[25px] font-semibold md:text-3xl tracking-tight">
               Shoot a message
             </h2>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              className={`rounded-xl p-2.5 w-full focus:border-0 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Adress"
-              className={`rounded-xl p-2.5 w-full ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
-              required
-            />
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Let’s start the conversation..."
-              className={`rounded-xl p-2.5 w-full h-28 resize-none ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
-              required
-            ></textarea>
+            <div className="space-y-6">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 ${
+                  state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                }`}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Adress"
+                className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 ${
+                  state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                }`}
+                required
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Let’s start the conversation..."
+                className={`rounded-xl p-2.5 w-full h-24 focus:outline-1 outline-stone-600 resize-none ${
+                  state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
+                }`}
+                required
+              ></textarea>
+            </div>
             <button
               type="submit"
               disabled={state.status === "sending"}
-              className={`py-1 px-20 bg-[#635bff] cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl animate-pulse ${state.darkMode ? "hover:scale-95" : "hover:scale-95 hover:bg-black hover:text-white"}`}
+              className={`py-1 px-20 bg-[#635bff] cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl animate-pulse ${
+                state.darkMode
+                  ? "hover:scale-95"
+                  : "hover:scale-95 hover:bg-black hover:text-white"
+              }`}
             >
               {state.status === "sending" ? "Shooting..." : "Shoot"}
             </button>
