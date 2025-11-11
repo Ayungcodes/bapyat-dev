@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Ramilas";
+  src: url("/public/font/TT\ Ramillas\ Trial\ Regular.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: "Space Grotesk", Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 
@@ -24,3 +29,9 @@ body,
 .dark {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* @layer components {
+  .paragraph-line {
+    @apply text-nowrap overflow-hidden;
+  }
+} */
