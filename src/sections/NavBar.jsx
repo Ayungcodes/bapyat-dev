@@ -269,7 +269,7 @@ const NavBar = ({
               </button>
             </div>
             {/* footer for mobile menu area */}
-            <div className="absolute bottom-0 flex items-center w-screen h-10 p-2 border-gray-800 text-[14px] lg:justify-center md:text-xl botttom-0 font-[Ramilas]">
+            <div className="absolute bottom-3 flex items-center w-screen h-10 p-4 border-gray-800 text-[14px] lg:justify-center md:text-xl botttom-0 font-[Ramilas]">
               <h2>
                 Crafted by{" "}
                 <span className="text-[#635bff]/90">Gaius Emmanuel.</span>

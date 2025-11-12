@@ -94,7 +94,7 @@ const App = () => {
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({
       behavior: "smooth",
-      block: "start", // scrolls to top of section
+      block: "start",
     });
   };
 

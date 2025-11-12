@@ -14,7 +14,7 @@ const Projects = ({ state, projectsRef }) => {
         state.openNav ? "blur-sm" : "blur-none"
       } space-y-16 flex flex-col justify-center py-16 sm:py-20 md:py-24`}
     >
-      <div className="flex flex-col space-y-6 text-center px-6 sm:px-12 md:px-24">
+      <div className="flex flex-col space-y-4 text-center px-6 sm:px-12 md:px-24">
         <h1 className="text-2xl sm:text-3xl md:text-[36px] font-semibold underline underline-offset-8 decoration-[#635bff] font-[Ramilas]">
           Featured Projects
         </h1>
@@ -40,8 +40,7 @@ const Projects = ({ state, projectsRef }) => {
             key={project.id}
             className="
           flex flex-col lg:flex-row items-center lg:gap-7
-          w-full sm:w-[85vw] md:w-[70vw] lg:w-[80vw]
-          flex-none
+          w-full sm:w-[85vw] md:w-[80vw] flex-none
         "
           >
             <img
@@ -86,7 +85,7 @@ const Projects = ({ state, projectsRef }) => {
         <a
           id="hire-nav"
           href="#hire"
-          className={`py-1 px-7 md:text-lg rounded-4xl bg-[#635bff] transition duration-300 cursor-pointer ${
+          className={`py-1 px-10 md:text-xl rounded-4xl bg-[#635bff] transition duration-300 cursor-pointer ${
             state.darkMode ? "hover:opacity-80" : "hover:bg-black text-white"
           } animate-pulse`}
         >
