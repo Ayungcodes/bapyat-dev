@@ -6,17 +6,17 @@ import gsap from "gsap";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 
 import NavBar from "./sections/NavBar";
-import WelcomeSection from "./sections/WelcomeSection";
 import AboutSection from "./sections/AboutSection";
 import Projects from "./sections/Projects";
 import TechStack from "./sections/TechStack";
 import ContactMe from "./sections/ContactMe";
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollSmoother);
+import CosmicHero from "./sections/CosmicHero";
+import Starfield from "../components/Starfield";
+gsap.registerPlugin(ScrollSmoother, ScrollSmoother, ScrollTrigger);
 
 const App = () => {
   const [state, setState] = useState({
-    darkMode: false,
+
     openNav: false,
     hireState: false,
     status: "idle",
@@ -98,13 +98,6 @@ const App = () => {
     });
   };
 
-  const toggleTheme = () => {
-    setState((prevState) => ({
-      ...prevState,
-      darkMode: !prevState.darkMode,
-    }));
-  };
-
   const toggleNav = () => {
     setState((prevState) => ({
       ...prevState,
@@ -130,9 +123,7 @@ const App = () => {
 
   return (
     <main
-      className={`${
-        state.darkMode ? "dark text-white" : "light text-stone-800"
-      } min-h-screen max-w-[100vw] overflow-x-hidden selection:bg-[#635bff]`}
+      className={`min-h-screen max-w-[100vw] overflow-x-hidden selection:bg-gray-500`}
     >
       {state.loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-[#0d1117] z-99999">
@@ -149,29 +140,30 @@ const App = () => {
         </div>
       )}
 
+      <Starfield />
       {/* navigation area */}
-      <NavBar
-        scrollToSection={scrollToSection}
-        refs={{
-          welcomeRef,
-          aboutRef,
-          projectsRef,
-          skillsRef,
-          contactRef,
-          logoRef,
-        }}
-        state={state}
-        setState={setState}
-        toggleNav={toggleNav}
-        toggleTheme={toggleTheme}
-      />
 
-      {/* welcome section */}
-      <WelcomeSection
-        refs={{ welcomeRef, aboutRef, projectsRef, contactRef }}
-        state={state}
-        scrollToSection={scrollToSection}
-      />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <NavBar
+            scrollToSection={scrollToSection}
+            refs={{
+              welcomeRef,
+              aboutRef,
+              projectsRef,
+              skillsRef,
+              contactRef,
+              logoRef,
+            }}
+            state={state}
+            setState={setState}
+            toggleNav={toggleNav}
+          />
+
+          {/* welcome section */}
+          <CosmicHero state={state} />
+        </div>
+      </div>
 
       {/* about section */}
       <AboutSection
@@ -195,18 +187,20 @@ const App = () => {
         contactRef={contactRef}
       />
 
-      <div className="flex justify-center items-center mt-32">
-        <button onClick={() => scrollToSection(welcomeRef)}>
-          <i className="fa-solid fa-arrow-up text-xl animate-bounce"></i>
-        </button>
+      <div className="flex justify-center items-center animate-bounce mt-32">
+        <div
+          className={`w-7 h-11 rounded-full border-2 backdrop-blur-smbg-[#1e1e1e]/40 border-[#32FF87]/70 shadow-[0_0_15px_#0A3A1D] flex justify-center pt-3`}
+        >
+          <div
+            className={`w-1 h-2 bg-[#32FF87] rounded-full animate-scroll`}
+          ></div>
+        </div>
       </div>
 
       {/* footer */}
-      <footer className="w-screen shadow-2xl font-[Ramilas]">
+      <footer className="w-screen shadow-2xl font-[Sora]">
         <div
-          className={`flex items-center w-screen h-full p-7 text-md mt-30 justify-center md:text-[18px] shadow-xl ${
-            state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-          } ${state.openNav ? "blur-sm" : "blur-none"}`}
+          className={`flex items-center w-screen h-full p-7 text-[13px] mt-30 justify-center md:text-[18px] shadow-xl bg-[#1f1f1f]/40 border-t-[1px] border-stone-600 ${state.openNav ? "blur-sm" : "blur-none"}`}
         >
           <h2>©Copyright - Gaius Emmanuel 2025</h2>
         </div>

@@ -8,17 +8,15 @@ const Projects = ({ state, projectsRef }) => {
   return (
     <section
       ref={projectsRef}
-      className={`overflow-hidden ${
-        state.darkMode ? "bg-black" : "bg-gray-100"
-      } shadow-md mt-40 ${
+      className={`overflow-hidden border-t-[1px] border-b-[1px] border-stone-800 shadow-md mt-40 ${
         state.openNav ? "blur-sm" : "blur-none"
       } space-y-16 flex flex-col justify-center py-16 sm:py-20 md:py-24`}
     >
-      <div className="flex flex-col space-y-4 text-center px-6 sm:px-12 md:px-24">
-        <h1 className="text-2xl sm:text-3xl md:text-[36px] font-semibold underline underline-offset-8 decoration-[#635bff] font-[Ramilas]">
-          Featured Projects
+      <div className="flex flex-col space-y-2 text-center px-6 sm:px-12 md:px-24">
+        <h1 className="text-[33px] md:text-[38px] font-semibold font-[Sora]">
+          Featured Projects.
         </h1>
-        <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl max-w-3xl mx-auto">
           I craft ideas into seamless, user-friendly experiences that bring
           creativity and purpose to life on the web.
         </p>
@@ -74,7 +72,7 @@ const Projects = ({ state, projectsRef }) => {
             "
               >
                 View Project
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-4 h-4 transition-transform duration-200 hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -85,9 +83,7 @@ const Projects = ({ state, projectsRef }) => {
         <a
           id="hire-nav"
           href="#hire"
-          className={`py-1 px-10 md:text-xl rounded-4xl bg-[#635bff] transition duration-300 cursor-pointer ${
-            state.darkMode ? "hover:opacity-80" : "hover:bg-black text-white"
-          } animate-pulse`}
+          className={`py-1 px-10 md:text-xl transition duration-300 cursor-pointer rounded-4xl bg-[#32FF87] text-[#0a0a0a] hover:opacity-80 hover:scale-95 hover:bg-[#ffff]`}
         >
           View All
         </a>

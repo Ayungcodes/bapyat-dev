@@ -7,12 +7,10 @@ const AboutSection = ({state, refs, handleHireTrue, handleHireFalse, scrollToSec
   return (
     <section
       ref={aboutRef}
-      className={`${
-        state.darkMode ? "bg-black" : "bg-gray-100"
-      } py-14 pb-28 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
+      className={`border-t-[1px] border-b-[1px] border-stone-800 py-14 pb-28 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
     >
-      <h1 className="text-center  text-3xl underline underline-offset-10 decoration-[#635bff] md:text-[36px] py-7 tracking-tight font-semibold font-[Ramillas]">
-        Developer in Focus
+      <h1 className="text-center text-[33px] md:text-[38px] py-4 tracking-tight font-semibold font-[Sora]">
+        Developer in Focus.
       </h1>
       <div className="lg:mx-14 flex flex-col items-center justify-center lg:space-y-0 -space-y-16 lg:flex-row lg:justify-around rounded-3xl">
         <div className="text-lg space-y-5 mx-6 md:text-xl lg:w-[48%]">
@@ -47,28 +45,26 @@ const AboutSection = ({state, refs, handleHireTrue, handleHireFalse, scrollToSec
 
         {/* photo card */}
         <div
-          className={`flex flex-col justify-center space-y-1.5 items-center h-[59vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[60vh] ${
-            state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-          } mx-auto mt-32 shadow-sm rounded-2xl`}
+          className={`flex flex-col justify-center space-y-1.5 items-center h-[59vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[60vh] bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
         >
           <div className="relative h-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] w-[180px]">
             <img
               src={myImage}
               alt="my photo"
-              className="h-full w-full object-cover rounded-full border-[1.5px] border-[#635bff]"
+              className="h-full w-full object-cover rounded-full border-[1.5px] border-[#32FF87] shadow-md"
               onMouseEnter={handleHireTrue}
               onMouseLeave={handleHireFalse}
             />
             <div
               className={`absolute top-1/2 left-1/2 flex justify-center items-center -translate-x-1/2 -translate-y-1/2 text-center transition-all ease-in-out duration-500 ${
                 state.hireState
-                  ? "opacity-100 bg-black/50 h-[180px] w-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] border-[1.5px] border-[#635bff] rounded-full"
+                  ? "opacity-100 bg-black/50 h-[180px] w-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] border-[1.5px] border-[#32FF87] rounded-full"
                   : "h-0 opacity-0"
               }`}
             >
               <button
                 onClick={() => scrollToSection(contactRef)}
-                className="cursor-pointer bg-[#635bff] py-1 px-4 rounded-4xl transition-all duration-200 hover:scale-95 md:text-[18px]"
+                className={`cursor-pointer bg-[#32FF87] rounded-4xl text-[#0A0A0A] py-1 px-4 transition-all duration-200 hover:scale-95 hover:bg-[#ffff] md:text-[18px]`}
               >
                 <a href="#hire-me">Hire Me</a>
               </button>
@@ -77,7 +73,7 @@ const AboutSection = ({state, refs, handleHireTrue, handleHireFalse, scrollToSec
           <h1 className="text-[26px] md:text-3xl font-semibold font-[Ramilas]">
             Gaius Emmanuel
           </h1>
-          <h2 className="-mt-1 text-[#635bff] font-semibold text-[19px] md:text-[22px] font-[Ramilas]">
+          <h2 className="-mt-1 font-semibold text-[19px] md:text-[22px] font-[Ramilas]">
             Frontend Web Developer
           </h2>
           <p className="text-center mx-8 md:mx-16 -mt-1 text-lg md:text-xl">

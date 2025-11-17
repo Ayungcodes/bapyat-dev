@@ -9,14 +9,12 @@ const TechStack = ({ state, skillsRef }) => {
   return (
     <section
         ref={skillsRef}
-        className={`${
-          state.darkMode ? "bg-black" : "bg-gray-100"
-        } py-20 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
+        className={`border-t-[1px] border-b-[1px] border-stone-800 py-20 shadow-md mt-40 ${state.openNav ? "blur-sm" : "blur-none"}`}
       >
         <div className="flex flex-col justify-center items-center space-y-6 mx-6">
-          <div className="flex flex-col gap-4 justify-center items-center tracking-tight">
-            <h1 className="text-3xl font-semibold text-center underline underline-offset-10 decoration-[#635bff] md:text-[36px] tracking-tight font-[Ramilas]">
-              Technologies I Use
+          <div className="flex flex-col gap-2 justify-center items-center tracking-tight">
+            <h1 className="text-[33px] font-semibold text-center md:text-[38px] tracking-tight font-[Sora]">
+              Technologies I Use.
             </h1>
             <p className="text-lg text-center tracking-tight md:text-xl mx-8 md:mx-24 lg:mx-36">
               These are the tools and technologies I work with to design, build,
@@ -26,53 +24,41 @@ const TechStack = ({ state, skillsRef }) => {
 
           <div className="flex flex-wrap justify-evenly items-center text-sm md:text-[16px]">
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-lg`}
             >
               <img className="w-full" src={htmlIcon} alt="HTML5" />
               HTML5
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-lg`}
             >
               <img className="w-full" src={cssIcon} alt="CSS3" />
               CSS3
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-lg`}
             >
               <img className="w-full" src={jsIcon} alt="JS" />
               JS
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-lg`}
             >
               <img className="w-full" src={tailwindIcon} alt="Tailwind" />
               Tailwind
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-lg`}
             >
               <img className="w-full" src={reactIcon} alt="React" />
               React
             </div>
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-lg`}
             >
               <img className="w-full" src={gitIcon} alt="Git" />
               Git
@@ -80,12 +66,10 @@ const TechStack = ({ state, skillsRef }) => {
           </div>
 
           <div
-            className={`flex flex-col justify-center items-center shadow-sm h-40 w-[87vw] rounded-4xl text-center text-md md:h-48 md:w-[440px] transition-all duration-200 hover:scale-105 ${
-              state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-            }`}
+            className={`flex flex-col justify-center items-center shadow-sm h-40 w-[87vw] rounded-4xl text-center text-md md:h-48 md:w-[440px] transition-all duration-200 hover:scale-105 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-lg`}
           >
             <div className="py-3 space-y-0.5 mx-3">
-              <h2 className="text-md font-semibold md:text-[25px] font-[Ramilas]">
+              <h2 className="text-lg font-semibold md:text-[25px] font-[Ramilas]">
                 Always Learning
               </h2>
               <p className="md:text-[18px]">

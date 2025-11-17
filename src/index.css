@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@keyframes scroll {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(6px); opacity: .4; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-scroll {
+  animation: scroll 1.8s ease-in-out infinite;
+}
+
+
 @font-face {
   font-family: "Ramilas";
   src: url("/public/font/TT\ Ramillas\ Trial\ Regular.ttf");
@@ -10,28 +21,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: Helvetica, sans-serif;
-}
-
-
-.light {
-  background-color: #ffffff;
-  color: #111111;
-}
-
-.dark {
-  background-color: #000;
+  font-family: "Stack Sans Notch", sans-serif;
+  font-weight: 200;
+  background-color: #1e1e1e;
   color: #ffffff;
 }
-
-body,
-.light,
-.dark {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* @layer components {
-  .paragraph-line {
-    @apply text-nowrap overflow-hidden;
-  }
-} */

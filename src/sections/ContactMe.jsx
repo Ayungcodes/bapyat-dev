@@ -2,13 +2,13 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
   return (
     <div
       ref={contactRef}
-      className={`${
-        state.darkMode ? "bg-black" : "bg-gray-100"
-      } py-20 mt-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
+      className={`border-t-[1px] border-b-[1px] border-stone-700 py-20 mt-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"} backdrop-blur-xl`}
     >
-      <div className="flex flex-col space-y-5 items-center justify-center mx-6">
-        <h1 className="text-3xl md:text-[36px] font-semibold underline underline-offset-10 decoration-[#635bff] tracking-tight font-[Ramilas]">
-          Let’s Create Magic
+      <div className="flex flex-col space-y-2 items-center justify-center mx-6">
+        <h1
+          className="heading text-[33px] md:text-[38px] font-semibold tracking-tight font-[Sora]"
+        >
+          Let’s Create Magic.
         </h1>
         <p className="text-center text-lg md:text-xl mx-8 md:mx-24 lg:mx-36">
           Creativity isn’t just a skill — it’s an energy. Together, we’ll
@@ -21,12 +21,10 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
       <div className="flex flex-col items-center justify-center space-y-7 lg:flex-row lg:space-x-14">
         <div className="flex flex-col space-y-8 items-center justify-center h-[36vh] lg:h-[38vh] w-[92%] md:w-[90%] lg:w-[40vw]">
           <div
-            className={`flex flex-col justify-center w-full h-full ${
-              state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-            } mx-auto mt-12 shadow-sm rounded-2xl transition-all duration-200 p-6 items-start space-y-4`}
+            className={`flex flex-col justify-center w-full h-full bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 mx-auto mt-12 shadow-sm rounded-2xl transition-all duration-200 p-6 items-start space-y-4 backdrop-blur-xl`}
           >
             <div className="flex flex-col justify-center md:mx-5 lg:mx-0 space-y-3 mt-4">
-              <h1 className="text-[25px] font-semibold tracking-tight md:text-3xl font-[Ramilas]">
+              <h1 className="text-[25px] font-semibold tracking-tight md:text-3xl font-[Sora]">
                 Let's Connect
               </h1>
               <div>
@@ -34,7 +32,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                   <i className="fa-regular fa-id-badge text-3xl md:text-4xl"></i>
                   <div className="text-[18px] md:text-xl -space-y-1">
                     <h2 className="tracking-tight">Gaius Emmanuel</h2>
-                    <h3 className="text-gray-600 text-[15px] md:text-[18px]">
+                    <h3 className="text-gray-400 text-[15px] md:text-[18px]">
                       Frontend Web Developer
                     </h3>
                   </div>
@@ -124,9 +122,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
               name="name"
               id="name"
               placeholder="Name"
-              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-2xl`}
               required
             />
             <input
@@ -134,29 +130,21 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
               name="email"
               id="email"
               placeholder="Email Adress"
-              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-2xl`}
               required
             />
             <textarea
               name="message"
               id="message"
               placeholder="Let’s start the conversation..."
-              className={`rounded-xl p-2.5 w-full h-24 focus:outline-1 outline-stone-600 resize-none ${
-                state.darkMode ? "bg-gray-900/70" : "bg-gray-300/60"
-              }`}
+              className={`rounded-xl p-2.5 w-full h-24 focus:outline-1 outline-stone-600 resize-none bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-2xl`}
               required
             ></textarea>
           </div>
           <button
             type="submit"
             disabled={state.status === "sending"}
-            className={`py-1 px-20 bg-[#635bff] cursor-pointer rounded-full transition duration-300 md:px-30 md:text-xl animate-pulse ${
-              state.darkMode
-                ? "hover:scale-95"
-                : "hover:scale-95 hover:bg-black hover:text-white"
-            }`}
+            className={`py-1 px-20 cursor-pointer transition duration-300 md:px-30 md:text-xl hover:scale-95 hover:bg-[#ffff] bg-[#32FF87] text-[#0a0a0a] rounded-full`}
           >
             {state.status === "sending" ? "Shooting..." : "Shoot"}
           </button>
