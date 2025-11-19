@@ -9,15 +9,15 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
 
   return (
     <nav
-      className={`py-5 w-screen flex items-center fixed backdrop-blur-sm z-9999`}
+      className={`py-4 w-screen flex items-center fixed backdrop-blur-sm z-9999`}
     >
-      <div className="md:px-6 md:py-3 lg:px-14 lg:py-4 flex items-center justify-between mx-6 w-screen">
+      <div className="md:px-5 md:py-3 lg:px-7 flex items-center justify-between px-3 w-screen">
         {/* logo */}
         <div className="flex justify-center items-center gap-2">
           <img
             src="/icons/christmas-tree.png"
             alt="christmas tree"
-            className="h-7 md:h-8"
+            className="h-7 md:h-8 z-99999"
           />
           <button
             onClick={() => {
@@ -93,15 +93,15 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
           {/* toggleBtn */}
           <button
             onClick={toggleNav}
-            className="block lg:hidden space-y-1.5 cursor-pointer transition-transform duration-300 hover:scale-95 z-50 py-2 px-4 rounded-2xl"
+            className="block lg:hidden space-y-1.5 md:space-y-2 cursor-pointer transition-transform duration-300 hover:scale-95 z-50 py-2 px-4 rounded-2xl"
           >
             <span
-              className={`bg-white h-[2px] w-7 block rounded-full transition-all duration-200 ${
+              className={`bg-white h-[2px] w-7 md:w-9 block rounded-full transition-all duration-200 ${
                 state.openNav ? "rotate-45" : "rotate-0"
               }`}
             ></span>
             <span
-              className={`bg-white h-[2px] w-[19px] block rounded-full transition-all duration-200 ${
+              className={`bg-white h-[2px] w-[19px] md:w-[26px] block rounded-full transition-all duration-200 ${
                 state.openNav ? "-rotate-45" : "rotate-0"
               }`}
             ></span>

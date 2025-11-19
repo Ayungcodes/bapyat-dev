@@ -7,7 +7,7 @@ const AboutSection = ({state, refs, handleHireTrue, handleHireFalse, scrollToSec
   return (
     <section
       ref={aboutRef}
-      className={`border-t-[1px] border-b-[1px] border-stone-800 py-14 pb-28 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
+      className={`border-t-[3px] border-b-[3px] border-stone-800 py-14 pb-28 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
     >
       <h1 className="text-center text-[33px] md:text-[38px] py-4 tracking-tight font-semibold font-[Sora]">
         Developer in Focus.
@@ -45,13 +45,13 @@ const AboutSection = ({state, refs, handleHireTrue, handleHireFalse, scrollToSec
 
         {/* photo card */}
         <div
-          className={`flex flex-col justify-center space-y-1.5 items-center h-[59vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[60vh] bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
+          className={`flex flex-col justify-center space-y-1.5 items-center h-[59vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[60vh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
         >
           <div className="relative h-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] w-[180px]">
             <img
               src={myImage}
               alt="my photo"
-              className="h-full w-full object-cover rounded-full border-[1.5px] border-[#32FF87] shadow-md"
+              className="h-full w-full object-cover rounded-full border-[2px] border-[#32FF87] shadow-md"
               onMouseEnter={handleHireTrue}
               onMouseLeave={handleHireFalse}
             />

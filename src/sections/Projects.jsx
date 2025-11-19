@@ -8,7 +8,7 @@ const Projects = ({ state, projectsRef }) => {
   return (
     <section
       ref={projectsRef}
-      className={`overflow-hidden border-t-[1px] border-b-[1px] border-stone-800 shadow-md mt-40 ${
+      className={`overflow-hidden border-t-[3px] border-b-[3px] border-stone-800 shadow-md mt-40 ${
         state.openNav ? "blur-sm" : "blur-none"
       } space-y-16 flex flex-col justify-center py-16 sm:py-20 md:py-24`}
     >

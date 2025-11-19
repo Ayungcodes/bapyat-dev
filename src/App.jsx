@@ -16,7 +16,6 @@ gsap.registerPlugin(ScrollSmoother, ScrollSmoother, ScrollTrigger);
 
 const App = () => {
   const [state, setState] = useState({
-
     openNav: false,
     hireState: false,
     status: "idle",
@@ -187,12 +186,12 @@ const App = () => {
         contactRef={contactRef}
       />
 
-      <div className="flex justify-center items-center animate-bounce mt-32">
+      <div className="flex justify-center items-center mt-32">
         <div
-          className={`w-7 h-11 rounded-full border-2 backdrop-blur-smbg-[#1e1e1e]/40 border-[#32FF87]/70 shadow-[0_0_15px_#0A3A1D] flex justify-center pt-3`}
+          className={`w-7 h-11 md:w-9 md:h-14 rounded-full border-2 backdrop-blur-sm bg-[#1e1e1e]/40 border-[#32FF87]/70 shadow-[0_0_15px_#0A3A1D] flex justify-center pt-3`}
         >
           <div
-            className={`w-1 h-2 bg-[#32FF87] rounded-full animate-scroll`}
+            className={`w-1 h-2 md:h-2.5 md:w-1 bg-[#32FF87] rounded-full animate-scroll`}
           ></div>
         </div>
       </div>
@@ -200,7 +199,9 @@ const App = () => {
       {/* footer */}
       <footer className="w-screen shadow-2xl font-[Sora]">
         <div
-          className={`flex items-center w-screen h-full p-7 text-[13px] mt-30 justify-center md:text-[18px] shadow-xl bg-[#1f1f1f]/40 border-t-[1px] border-stone-600 ${state.openNav ? "blur-sm" : "blur-none"}`}
+          className={`flex items-center w-screen h-full p-7 text-[13px] mt-30 justify-center md:text-[18px] shadow-xl bg-[#1f1f1f]/40 border-t-[3px] border-stone-800 ${
+            state.openNav ? "blur-sm" : "blur-none"
+          }`}
         >
           <h2>©Copyright - Gaius Emmanuel 2025</h2>
         </div>

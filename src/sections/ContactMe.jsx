@@ -2,7 +2,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
   return (
     <div
       ref={contactRef}
-      className={`border-t-[1px] border-b-[1px] border-stone-700 py-20 mt-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"} backdrop-blur-xl`}
+      className={`border-t-[3px] border-b-[3px] border-stone-800 py-20 mt-32 shadow-md ${state.openNav ? "blur-sm" : "blur-none"} backdrop-blur-xl`}
     >
       <div className="flex flex-col space-y-2 items-center justify-center mx-6">
         <h1
@@ -21,7 +21,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
       <div className="flex flex-col items-center justify-center space-y-7 lg:flex-row lg:space-x-14">
         <div className="flex flex-col space-y-8 items-center justify-center h-[36vh] lg:h-[38vh] w-[92%] md:w-[90%] lg:w-[40vw]">
           <div
-            className={`flex flex-col justify-center w-full h-full bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 mx-auto mt-12 shadow-sm rounded-2xl transition-all duration-200 p-6 items-start space-y-4 backdrop-blur-xl`}
+            className={`flex flex-col justify-center w-full h-full bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-12 shadow-sm rounded-2xl transition-all duration-200 p-6 items-start space-y-4 backdrop-blur-xl`}
           >
             <div className="flex flex-col justify-center md:mx-5 lg:mx-0 space-y-3 mt-4">
               <h1 className="text-[25px] font-semibold tracking-tight md:text-3xl font-[Sora]">
@@ -122,7 +122,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
               name="name"
               id="name"
               placeholder="Name"
-              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-2xl`}
+              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-800 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
               required
             />
             <input
@@ -130,14 +130,14 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
               name="email"
               id="email"
               placeholder="Email Adress"
-              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-600 bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-2xl`}
+              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-800 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
               required
             />
             <textarea
               name="message"
               id="message"
               placeholder="Let’s start the conversation..."
-              className={`rounded-xl p-2.5 w-full h-24 focus:outline-1 outline-stone-600 resize-none bg-[#1f1f1f]/40 border-t-[1px] border-b-[1px] border-stone-600 backdrop-blur-2xl`}
+              className={`rounded-xl p-2.5 w-full h-24 focus:outline-1 outline-stone-800 resize-none bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
               required
             ></textarea>
           </div>

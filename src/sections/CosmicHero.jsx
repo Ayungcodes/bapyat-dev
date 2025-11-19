@@ -31,7 +31,7 @@ function CosmicHero({ state }) {
         x: window.innerWidth / 2 - 50,
         y: 60,
         scale: 0.6,
-        duration: 1.5,
+        duration: 0.6,
         ease: "power3.out",
       })
 
@@ -81,15 +81,18 @@ function CosmicHero({ state }) {
         <div className="w-[85vw] md:w-[70vw] lg:w-[60vw]">
           <div
             ref={starRef}
-            className="absolute w-3 h-3 rounded-full bg-white shadow-[0_0_15px_5px_white]"
+            className="absolute w-1 h-1 rounded-full bg-white shadow-[0_0_15px_5px_white] opacity-0"
+            style={{
+              boxShadow: "0 0 25px 10px rgba(255,255,255,0.8)",
+            }}
           ></div>
           <div
             ref={textRef}
-            className="flex flex-col justify-center items-center"
+            className="flex flex-col justify-center items-center opacity-0 scale-90"
           >
             <h1
               ref={welcomeTextRef}
-              className={`text-[26px] font-[Cormorant] font-semibold flex flex-wrap gap-[1px]`}
+              className={`text-[26px] md:text-[32px] font-[Cormorant] font-semibold flex flex-wrap gap-[1px]`}
             >
               <span>H</span>
               <span>i</span>
@@ -111,7 +114,7 @@ function CosmicHero({ state }) {
             <p className="text-center text-[30px] md:text-[38px] font-extrabold font-[Sora] leading-11">
               I'm{" "}
               <span
-                className={`text-transparent font-extralight [-webkit-text-stroke:2px_#fff]`}
+                className={`text-transparent font-extralight [-webkit-text-stroke:2px_#D6D3D1]`}
               >
                 Gaius Emmanuel,
               </span>{" "}
@@ -124,12 +127,12 @@ function CosmicHero({ state }) {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center animate-bounce">
+      <div className="flex justify-center items-center">
         <div
-          className={`w-7 h-11 rounded-full border-2 backdrop-blur-sm bg-[#1e1e1e]/40 border-[#32FF87]/70 shadow-[0_0_15px_#0A3A1D] flex justify-center pt-3`}
+          className={`w-7 h-11 md:w-9 md:h-14 rounded-full border-2 backdrop-blur-sm bg-[#1e1e1e]/40 border-[#32FF87]/70 shadow-[0_0_15px_#0A3A1D] flex justify-center pt-3`}
         >
           <div
-            className={`w-1 h-2 bg-[#32FF87] rounded-full animate-scroll`}
+            className={`w-1 h-2 md:h-2.5 md:w-1 bg-[#32FF87] rounded-full animate-scroll`}
           ></div>
         </div>
       </div>
