@@ -68,11 +68,11 @@ const Projects = ({ state, projectsRef }) => {
               gap-2
               text-sm md:text-base font-medium
               transition-all duration-200
-              hover:opacity-80
+              hover:opacity-80 group
             "
               >
                 View Project
-                <ExternalLink className="w-4 h-4 transition-transform duration-200 hover:translate-x-1" />
+                <ExternalLink className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </a>
             </div>
           </div>

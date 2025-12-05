@@ -76,10 +76,11 @@ const AboutSection = ({state, refs, handleHireTrue, handleHireFalse, scrollToSec
           <h2 className="-mt-1 font-semibold text-[19px] md:text-[22px] font-[Ramilas]">
             Frontend Web Developer
           </h2>
-          <p className="text-center mx-8 md:mx-16 -mt-1 text-lg md:text-xl">
+          <p className="text-center mx-8 md:mx-16 text-lg md:text-xl">
             I turn ideas into smooth, interactive experiences. Code is my
             language and the browser is my canvas.
           </p>
+          <a href="/public/My CV Resume.pdf" target='_blank' className='bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2'>My CV/Resume</a>
         </div>
       </div>
     </section>

@@ -24,41 +24,41 @@ const TechStack = ({ state, skillsRef }) => {
 
           <div className="flex flex-wrap justify-evenly items-center text-sm md:text-[16px]">
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
+              className={` flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-110 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
             >
               <img className="w-full" src={htmlIcon} alt="HTML5" />
               HTML5
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-110 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
             >
               <img className="w-full" src={cssIcon} alt="CSS3" />
               CSS3
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-110 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
             >
               <img className="w-full" src={jsIcon} alt="JS" />
               JS
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-110 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
             >
               <img className="w-full" src={tailwindIcon} alt="Tailwind" />
               Tailwind
             </div>
 
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-110 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
             >
               <img className="w-full" src={reactIcon} alt="React" />
               React
             </div>
             <div
-              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-105 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
+              className={`flex flex-col justify-center items-center shadow-sm cursor-pointer hover:scale-110 transition duration-200 w-[75px] h-[90px] md:w-[85px] md:h[100] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-lg`}
             >
               <img className="w-full" src={gitIcon} alt="Git" />
               Git

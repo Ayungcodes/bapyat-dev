@@ -178,8 +178,9 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
                 </h3>
                 <a
                   id="linkedin"
-                  href="#"
+                  href="https://www.linkedin.com/in/gaius-emmanuel-b10279202/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={`underline transition-all duration-200 hover:text-white`}
                 >
                   LinkedIn
@@ -188,6 +189,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
                   id="github"
                   href="https://github.com/Ayungcodes"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={`underline transition-all duration-200 hover:text-white`}
                 >
                   GitHub
@@ -196,6 +198,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
                   id="twitter"
                   href="https://x.com/Ayungclassics"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={`underline transition-all duration-200 hover:text-white`}
                 >
                   Twitter/X
@@ -204,6 +207,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
                   id="instagram"
                   href="https://www.instagram.com/ayungclassic/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={`underline transition-all duration-200 hover:text-white`}
                 >
                   Instagram
@@ -212,6 +216,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
                   id="fiverr"
                   href="https://www.fiverr.com/s/0bxeZ3v"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={`underline transition-all duration-200 hover:text-white`}
                 >
                   Fiverr

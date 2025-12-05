@@ -25,7 +25,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
           >
             <div className="flex flex-col justify-center md:mx-5 lg:mx-0 space-y-3 mt-4">
               <h1 className="text-[25px] font-semibold tracking-tight md:text-3xl font-[Sora]">
-                Let's Connect
+                Let's Connect:
               </h1>
               <div>
                 <div className="flex flex-row items-center gap-2">
@@ -79,28 +79,28 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-linkedin text-[32px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
+                    <i className="fa-brands fa-linkedin text-[32px] hover:text-gray-400/95 hover:scale-110 transition duration-200"></i>
                   </a>
                   <a
                     href="https://github.com/Ayungcodes"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-github text-[32px] hover:text-gray-600 hover:scale-110 hover: transition duration-200"></i>
+                    <i className="fa-brands fa-github text-[32px] hover:text-gray-400/95 hover:scale-110 hover: transition duration-200"></i>
                   </a>
                   <a
                     href="https://x.com/Ayungclassics"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-x-twitter text-[32px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
+                    <i className="fa-brands fa-x-twitter text-[32px] hover:text-gray-400/95 hover:scale-110 transition duration-200"></i>
                   </a>
                   <a
                     href="https://www.instagram.com/ayungclassic/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-instagram text-[32px] hover:text-gray-600 hover:scale-110 transition duration-200"></i>
+                    <i className="fa-brands fa-instagram text-[32px] hover:text-gray-400/95 hover:scale-110 transition duration-200"></i>
                   </a>
                 </div>
               </div>
