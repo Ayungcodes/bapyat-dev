@@ -160,7 +160,7 @@ const App = () => {
           />
 
           {/* welcome section */}
-          <CosmicHero state={state} />
+          <CosmicHero state={state} welcomeRef={welcomeRef} />
         </div>
       </div>
 

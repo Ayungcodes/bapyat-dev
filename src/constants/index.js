@@ -1,6 +1,12 @@
 const projectsArr = [
   {
     id: "project 1",
+    photo: "/images/dashboard.png",
+    description: "A custom-built dashboard designed for freelancers to manage clients, tasks, and project performance in one place. It includes real-time client tracking, task management, search and filtering, status monitoring, and clean data summaries for quick insights. Currently improving the UI, adding local storage persistence, and expanding analytics features to make it more powerful and efficient.",
+    link: "https://freelancer-dashboard-alpha.vercel.app/"
+  },
+  {
+    id: "project 2",
     photo: "/images/savora.png",
     name: "Savora",
     description:
@@ -8,7 +14,7 @@ const projectsArr = [
       link: "https://savora-restaurant.vercel.app/"
   },
   {
-    id: "project 2",
+    id: "project 3",
     photo: "/images/cookieJar.png",
     name: "The Cookie Jar",
     description:
@@ -16,7 +22,7 @@ const projectsArr = [
       link: "https://cookie-jar-mu.vercel.app/"
   },
   {
-    id: "project 3",
+    id: "project 4",
     photo: "/images/luxuryWatch.png",
     name: "Luxury Watch E-commerce Site",
     description:

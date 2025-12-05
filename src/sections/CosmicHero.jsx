@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Starfield from "../../components/Starfield";
 
-function CosmicHero({ state }) {
+function CosmicHero({ state, welcomeRef }) {
   const textRef = useRef(null);
   const welcomeTextRef = useRef(null);
 
@@ -72,6 +72,7 @@ function CosmicHero({ state }) {
 
   return (
     <section
+      ref={welcomeRef}
       className={`w-full min-h-screen flex flex-col items-center justify-center ${
         state.openNav ? "blur-sm" : "blur-none"
       }`}
