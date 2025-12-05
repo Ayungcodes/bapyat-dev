@@ -80,7 +80,7 @@ const AboutSection = ({state, refs, handleHireTrue, handleHireFalse, scrollToSec
             I turn ideas into smooth, interactive experiences. Code is my
             language and the browser is my canvas.
           </p>
-          <a href="/public/My CV Resume.pdf" target='_blank' className='bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2'>My CV/Resume</a>
+          <a href="/My CV Resume.pdf" target='_blank' className='bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2'>My CV/Resume</a>
         </div>
       </div>
     </section>
