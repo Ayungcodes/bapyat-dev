@@ -37,42 +37,57 @@ const Projects = ({ state, projectsRef }) => {
           <div
             key={project.id}
             className="
-          flex flex-col lg:flex-row items-center lg:gap-7
-          w-full sm:w-[85vw] md:w-[80vw] flex-none
-        "
+      group relative
+      flex flex-col lg:flex-row
+      w-full sm:w-[85vw] md:w-[80vw] flex-none
+      rounded-2xl
+      bg-stone-900/80 backdrop-blur
+      border border-stone-700
+      shadow-lg shadow-black/40
+      overflow-hidden
+      transition-all duration-500
+      hover:shadow-xl hover:shadow-black/60 hover:border-stone-500
+    "
           >
-            <img
-              src={project.photo}
-              alt={project.name}
-              className="
-            w-full lg:w-[50vw]
-            rounded-xl
-            transition-transform duration-300
-            hover:scale-105 hover:opacity-95
-            mb-4 lg:mb-0
-          "
-            />
-            <div className="space-y-3 sm:space-y-5 lg:space-y-7 text-center lg:text-left px-4 lg:px-0">
-              <h1 className="text-lg sm:text-2xl lg:text-4xl font-semibold font-[Ramilas]">
+            {/* image */}
+            <div className="relative w-full lg:w-[50%] overflow-hidden">
+              <img
+                src={project.photo}
+                alt={project.name}
+                className="
+          w-full h-full object-cover
+          transition-transform duration-700 ease-out
+          group-hover:scale-[1.04]
+        "
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
+
+            {/* content */}
+            <div className="flex flex-col justify-center gap-4 sm:gap-5 lg:gap-6 p-6 lg:p-10 text-center lg:text-left">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-[Sora] tracking-tight">
                 {project.name}
-              </h1>
-              <p className="text-sm sm:text-base md:text-[17px]">
+              </h2>
+
+              <p className="text-sm sm:text-base text-stone-300 leading-relaxed max-w-xl">
                 {project.description}
               </p>
+
               <a
                 href={project.link || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-              inline-flex items-center justify-center lg:justify-start
-              gap-2
-              text-sm md:text-base font-medium
-              transition-all duration-200
-              hover:opacity-80 group
-            "
+          inline-flex items-center gap-2
+          text-sm md:text-base font-medium
+          text-white
+          w-fit mx-auto lg:mx-0
+          transition-all duration-300
+          hover:text-stone-200
+        "
               >
                 View Project
-                <ExternalLink className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>

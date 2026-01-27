@@ -12,6 +12,7 @@ import TechStack from "./sections/TechStack";
 import ContactMe from "./sections/ContactMe";
 import CosmicHero from "./sections/CosmicHero";
 import Starfield from "../components/Starfield";
+import PromiseSection from "./sections/PromiseSection";
 gsap.registerPlugin(ScrollSmoother, ScrollSmoother, ScrollTrigger);
 
 const App = () => {
@@ -175,6 +176,9 @@ const App = () => {
 
       {/* projects */}
       <Projects state={state} projectsRef={projectsRef} />
+
+      {/* promise section */}
+      <PromiseSection state={state} />
 
       {/* tech stack */}
       <TechStack state={state} skillsRef={skillsRef} />

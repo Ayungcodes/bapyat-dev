@@ -14,11 +14,6 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
       <div className="md:px-5 md:py-3 lg:px-7 flex items-center justify-between px-3 w-screen">
         {/* logo */}
         <div className="flex justify-center items-center gap-2">
-          <img
-            src="/icons/christmas-tree.png"
-            alt="christmas tree"
-            className="h-7 md:h-8 z-99999"
-          />
           <button
             onClick={() => {
               scrollToSection(welcomeRef);
@@ -108,8 +103,8 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
           </button>
         </div>
       </div>
-      {/* mobile nav */}
 
+      {/* mobile nav */}
       <div
         className={`fixed top-0 w-full h-screen transition-all duration-300 ease-linear z-9999 text-[18px] md:text-2xl bg-black/80 ${
           state.openNav

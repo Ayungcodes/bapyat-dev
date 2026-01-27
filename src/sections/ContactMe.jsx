@@ -113,7 +113,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
           onSubmit={handleSubmit}
           className="flex flex-col space-y-8 mt-9 w-[90%] lg:w-[28vw]"
         >
-          <h2 className="text-left text-[25px] font-semibold md:text-3xl tracking-tight font-[Ramilas]">
+          <h2 className="text-left text-[25px] font-semibold md:text-3xl tracking-tight font-[Sora]">
             Shoot a message
           </h2>
           <div className="space-y-6">

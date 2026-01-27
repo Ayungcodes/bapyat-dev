@@ -112,16 +112,15 @@ function CosmicHero({ state, welcomeRef }) {
               <span>🧙🏾‍♂️</span>
             </h1>
 
-            <p className="text-center text-[30px] md:text-[38px] font-extrabold font-[Sora] leading-11">
+            <p className="text-center text-2xl md:text-3xl font-extrabold font-[Sora] leading-11">
               I'm{" "}
               <span
                 className={`text-transparent font-extralight [-webkit-text-stroke:2px_#D6D3D1]`}
               >
                 Gaius Emmanuel,
               </span>{" "}
-              a Frontend Web Developer &{" "}
-              <span className="">
-                Musical Artist blending code with cosmic energy to craft
+              a Frontend Web Developer{" "}
+              <span className="">blending code with cosmic energy to craft
                 interfaces that feel alive.
               </span>
             </p>
