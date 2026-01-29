@@ -22,7 +22,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
             className="
     font-[fredoka] text-xl md:text-3xl
     cursor-pointer z-50
-    transition-all duration-300 ease-out
+    transition-all duration-500 ease-out
     hover:scale-105
   "
           >

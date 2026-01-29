@@ -21,7 +21,7 @@ const TechStack = ({ state, skillsRef }) => {
           {techStack.map((tech) => (
             <div
               key={tech.id}
-              className={`flex flex-col justify-center items-center space-y-1 shadow-sm cursor-pointer hover:scale-105 transition duration-500 w-[75px] h-[90px] md:w-[85px] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 hover:border-stone-700 backdrop-blur-lg`}
+              className={`flex flex-col justify-center items-center space-y-0.5 shadow-sm cursor-pointer hover:scale-105 transition duration-500 w-[75px] h-[90px] md:w-[90px] md:h-[100px] m-3 rounded-2xl p-3 bg-[#1f1f1f]/40 border-[2px] border-stone-800 hover:border-stone-700 backdrop-blur-lg`}
             >
               <img className="w-full" src={tech.iconPath} alt={tech.name} />
               <h1>{tech.name}</h1>
