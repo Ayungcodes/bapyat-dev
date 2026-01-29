@@ -1,4 +1,4 @@
-import myImage from "../assets/MyPhoto.JPG";
+import myImage from "/images/MyPhoto.JPG";
 
 const AboutSection = ({
   state,
@@ -50,7 +50,7 @@ const AboutSection = ({
 
         {/* photo card */}
         <div
-          className={`flex flex-col justify-center space-y-2 items-center h-[65vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[68vh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
+          className={`flex flex-col justify-center space-y-2 items-center h-[68vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[68vh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
         >
           <div className="relative h-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] w-[180px]">
             <img

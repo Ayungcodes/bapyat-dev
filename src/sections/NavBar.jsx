@@ -18,11 +18,31 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
             onClick={() => {
               scrollToSection(welcomeRef);
             }}
-            useRef={logoRef}
-            className="font-[fredoka] text-xl md:text-3xl transition-transform duration-200 hover:scale-105 z-99999 cursor-pointer"
+            ref={logoRef}
+            className="
+    font-[fredoka] text-xl md:text-3xl
+    cursor-pointer z-50
+    transition-all duration-300 ease-out
+    hover:scale-105
+  "
           >
-            <span className={`text-[#32ff87]`}>Bapyat</span>
-            <span>.dev</span>
+            <span
+              className="
+      text-[#32ff87]
+      transition-all duration-300
+      hover:[text-shadow:0_0_8px_#32ff87,0_0_16px_#32ff87,0_0_32px_#32ff87]
+    "
+            >
+              Bapyat
+            </span>
+            <span
+              className="
+      transition-all duration-300
+      hover:[text-shadow:0_0_6px_#ffffff,0_0_14px_#32ff87]
+    "
+            >
+              .dev
+            </span>
           </button>
         </div>
 
@@ -88,29 +108,54 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
           {/* toggleBtn */}
           <button
             onClick={toggleNav}
-            className="block lg:hidden space-y-1.5 md:space-y-2 cursor-pointer transition-transform duration-300 hover:scale-95 z-50 py-2 px-4 rounded-2xl"
+            className={`
+    relative block lg:hidden
+    w-10 h-10
+    cursor-pointer
+    z-50
+    rounded-full
+    transition-transform duration-500
+    ${state.openNav ? "hover:rotate-[90deg]" : ""}
+  `}
           >
             <span
-              className={`bg-white h-[2px] w-7 md:w-9 block rounded-full transition-all duration-200 ${
-                state.openNav ? "rotate-45" : "rotate-0"
-              }`}
-            ></span>
+              className={`
+      absolute left-1/2 top-1/2
+      h-[2px] w-7 md:w-8
+      bg-white rounded-full
+      transition-all duration-500 ease-in-out
+      -translate-x-1/2 -translate-y-1/2
+      ${state.openNav ? "rotate-45" : "-translate-y-1.5"}
+    `}
+            />
+
             <span
-              className={`bg-white h-[2px] w-[19px] md:w-[26px] block rounded-full transition-all duration-200 ${
-                state.openNav ? "-rotate-45" : "rotate-0"
-              }`}
-            ></span>
+              className={`
+      absolute left-1/2 top-1/2
+      h-[2px] w-7 md:w-8
+      bg-white rounded-full
+      transition-all duration-500 ease-in-out
+      -translate-x-1/2 -translate-y-1/2
+      ${state.openNav ? "-rotate-45" : "translate-y-1.5"}
+    `}
+            />
           </button>
         </div>
       </div>
 
       {/* mobile nav */}
       <div
-        className={`fixed top-0 w-full h-screen transition-all duration-300 ease-linear z-9999 text-[18px] md:text-2xl bg-black/80 ${
-          state.openNav
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
+        className={`
+    fixed top-0 left-0 w-full h-screen
+    z-50
+    bg-black/80 backdrop-blur-sm
+    transition-all duration-700 ease-out
+    ${
+      state.openNav
+        ? "translate-y-0 opacity-100 pointer-events-auto"
+        : "translate-x-full opacity-0 pointer-events-none"
+    }
+  `}
       >
         <div className="text-center absolute top-0 right-0 transition-transform lg:hidden">
           <div className="flex flex-col justify-around items-start h-screen w-screen py-20 md:text-xl">
@@ -225,7 +270,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
                   scrollToSection(contactRef);
                   setState((state.openNav = false));
                 }}
-                className={`py-1 px-7 md:px-12 transition duration-300 cursor-pointer hover:opacity-80 hover:bg-[#ffff] rounded-4xl bg-[#32ff87] text-[#0A0A0A]`}
+                className={`py-1 px-7 md:px-12 transition duration-500 cursor-pointer hover:opacity-80 hover:bg-[#ffff] rounded-4xl bg-[#32ff87] text-[#0A0A0A]`}
               >
                 Hire Me
               </button>

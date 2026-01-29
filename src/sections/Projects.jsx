@@ -98,7 +98,7 @@ const Projects = ({ state, projectsRef }) => {
         <a
           id="hire-nav"
           href="#hire"
-          className={`py-1 px-10 md:text-xl transition duration-300 cursor-pointer rounded-4xl bg-[#32FF87] text-[#0a0a0a] hover:opacity-80 hover:scale-95 hover:bg-[#ffff]`}
+          className={`py-1 px-10 md:text-xl transition duration-500 cursor-pointer rounded-4xl bg-[#32FF87] text-[#0a0a0a] hover:opacity-80 hover:scale-95 hover:bg-[#ffff]`}
         >
           View All
         </a>

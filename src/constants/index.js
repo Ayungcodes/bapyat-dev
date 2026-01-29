@@ -65,3 +65,18 @@ export const promises = [
       "I value your input and encourage collaboration throughout the development process to ensure the final product meets your needs.",
   },
 ];
+
+export const techStack = [
+  { id: 1, name: "HTML5", iconPath: "/images/html-5.png" },
+  { id: 2, name: "CSS3", iconPath: "/images/css-3.png" },
+  { id: 3, name: "JS", iconPath: "/images/js.png" },
+  {
+    id: 4,
+    name: "Tailwind",
+    iconPath: "/images/icons8-tailwind-css-100.png",
+  },
+  { id: 5, name: "React.js", iconPath: "/images/react.png" },
+  { id: 6, name: "Node.js", iconPath: "/images/nodejs.png" },
+  { id: 7, name: "Git", iconPath: "/images/icons8-git-48.png" },
+  { id: 8, name: "GSAP", iconPath: "/images/gsap-greensock.svg" },
+];

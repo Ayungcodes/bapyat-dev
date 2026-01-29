@@ -50,7 +50,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                         rel="noopener noreferrer"
                       >
                         <div className="group">
-                          <span className="transition-all duration-300 hover:opacity-65">
+                          <span className="transition-all duration-500 hover:opacity-65">
                             gaiusemmanuel12@gmail.com
                           </span>
                         </div>
@@ -61,7 +61,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                         className=""
                       >
                         <div className="group">
-                          <span className="transition-all duration-300 hover:opacity-65 tracking-tighter">
+                          <span className="transition-all duration-500 hover:opacity-65 tracking-tighter">
                             +234 701 137 2616
                           </span>
                         </div>
@@ -79,28 +79,28 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-linkedin text-[32px] hover:text-gray-400/95 hover:scale-110 transition duration-200"></i>
+                    <i className="fa-brands fa-linkedin text-[32px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
                   </a>
                   <a
                     href="https://github.com/Ayungcodes"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-github text-[32px] hover:text-gray-400/95 hover:scale-110 hover: transition duration-200"></i>
+                    <i className="fa-brands fa-github text-[32px] hover:text-gray-400/95 hover:scale-105 hover: transition duration-500"></i>
                   </a>
                   <a
                     href="https://x.com/Ayungclassics"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-x-twitter text-[32px] hover:text-gray-400/95 hover:scale-110 transition duration-200"></i>
+                    <i className="fa-brands fa-x-twitter text-[32px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
                   </a>
                   <a
                     href="https://www.instagram.com/ayungclassic/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-instagram text-[32px] hover:text-gray-400/95 hover:scale-110 transition duration-200"></i>
+                    <i className="fa-brands fa-instagram text-[32px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
                   </a>
                 </div>
               </div>
@@ -122,7 +122,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
               name="name"
               id="name"
               placeholder="Name"
-              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-800 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
+              className={`rounded-xl p-2.5 w-full focus:outline-1 focus:border-stone-700 outline-stone-800 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
               required
             />
             <input
@@ -130,21 +130,21 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
               name="email"
               id="email"
               placeholder="Email Adress"
-              className={`rounded-xl p-2.5 w-full focus:outline-1 outline-stone-800 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
+              className={`rounded-xl p-2.5 w-full focus:outline-1 focus:border-stone-700 outline-stone-800 bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
               required
             />
             <textarea
               name="message"
               id="message"
               placeholder="Let’s start the conversation..."
-              className={`rounded-xl p-2.5 w-full h-24 focus:outline-1 outline-stone-800 resize-none bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
+              className={`rounded-xl p-2.5 w-full h-24 focus:outline-1 focus:border-stone-700 outline-stone-800 resize-none bg-[#1f1f1f]/40 border-[2px] border-stone-800 backdrop-blur-2xl`}
               required
             ></textarea>
           </div>
           <button
             type="submit"
             disabled={state.status === "sending"}
-            className={`py-1 px-20 cursor-pointer transition duration-300 md:px-30 md:text-xl hover:scale-95 hover:bg-[#ffff] bg-[#32FF87] text-[#0a0a0a] rounded-full`}
+            className={`py-1 px-20 cursor-pointer transition duration-500 md:px-30 md:text-xl hover:scale-95 hover:bg-[#ffff] bg-[#32FF87] text-[#0a0a0a] rounded-full`}
           >
             {state.status === "sending" ? "Shooting..." : "Shoot"}
           </button>

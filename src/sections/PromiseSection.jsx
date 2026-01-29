@@ -18,7 +18,7 @@ const PromiseSection = ({ state }) => {
           {promises.map((promise) => (
             <div
               key={promise.id}
-              className="flex gap-3 bg-stone-900 border border-stone-700 rounded-xl p-6 mx-3 md:mx-5 hover:border-stone-500 transition-all duration-300"
+              className="flex gap-3 bg-stone-900 border border-stone-700 rounded-xl p-6 mx-3 md:mx-5 hover:border-stone-500 transition-all duration-500 shadow-lg"
             >
               <span className="text-[#32FF87] text-xl">✔</span>
               <div>
