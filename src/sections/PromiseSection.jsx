@@ -14,7 +14,7 @@ const PromiseSection = ({ state }) => {
           </h1>
         </div>
         {/* promise cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {promises.map((promise) => (
             <div
               key={promise.id}

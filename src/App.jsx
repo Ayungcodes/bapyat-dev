@@ -207,7 +207,7 @@ const App = () => {
             state.openNav ? "blur-sm" : "blur-none"
           }`}
         >
-          <h2>©Copyright - Gaius Emmanuel 2025</h2>
+          <h2>©Copyright - Gaius Emmanuel {new Date().getFullYear()}</h2>
         </div>
       </footer>
     </main>
