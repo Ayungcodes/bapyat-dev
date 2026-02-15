@@ -154,7 +154,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
 
       {/* nav link */}
       <div className="flex flex-col items-start space-y-7 font-semibold">
-        <h3 className="text-[16px] md:text-[18px] text-gray-300">Menu</h3>
+        <h3 className="text-[16px] md:text-[18px] text-gray-400">Menu</h3>
         {[
           { label: "Home", ref: welcomeRef },
           { label: "About", ref: aboutRef },
@@ -182,7 +182,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
 
       {/* social links */}
       <div className="flex flex-col items-start space-y-7 font-semibold">
-        <h3 className="text-[16px] md:text-[18px] text-gray-300">Socials</h3>
+        <h3 className="text-[16px] md:text-[18px] text-gray-400">Socials</h3>
         {[
           { label: "LinkedIn", href: "https://www.linkedin.com/in/gaius-emmanuel-b10279202/" },
           { label: "GitHub", href: "https://github.com/Ayungcodes" },

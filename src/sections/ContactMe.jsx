@@ -62,7 +62,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                       >
                         <div className="group">
                           <span className="transition-all duration-500 hover:opacity-65 tracking-tighter">
-                            +234 813 729 7521
+                            +234 701 137 2616
                           </span>
                         </div>
                       </a>
@@ -73,34 +73,34 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
 
               {/* Socials */}
               <div className="mt-3 mb-6">
-                <div className="">
+                <div className="space-x-1.5">
                   <a
                     href="https://www.linkedin.com/in/gaius-emmanuel-b10279202/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-linkedin text-[32px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
+                    <i className="fa-brands fa-linkedin text-[28px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
                   </a>
                   <a
                     href="https://github.com/Ayungcodes"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-github text-[32px] hover:text-gray-400/95 hover:scale-105 hover: transition duration-500"></i>
+                    <i className="fa-brands fa-github text-[28px] hover:text-gray-400/95 hover:scale-105 hover: transition duration-500"></i>
                   </a>
                   <a
                     href="https://x.com/Ayungclassics"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-x-twitter text-[32px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
+                    <i className="fa-brands fa-x-twitter text-[28px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
                   </a>
                   <a
                     href="https://www.instagram.com/ayungclassic/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fa-brands fa-instagram text-[32px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
+                    <i className="fa-brands fa-instagram text-[28px] hover:text-gray-400/95 hover:scale-105 transition duration-500"></i>
                   </a>
                 </div>
               </div>

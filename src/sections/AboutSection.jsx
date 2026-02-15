@@ -20,31 +20,19 @@ const AboutSection = ({
       <div className="lg:mx-14 flex flex-col items-center justify-center lg:-space-y-30 -space-y-16 lg:flex-row md:space-x-14 rounded-3xl">
         <div className="text-lg space-y-5 mx-6 md:text-xl lg:w-[48%]">
           <p className="aboutTxt">
-            As a driven and innovative front-end developer with over 3 years of
-            experience, I specialize in crafting captivating user interfaces
-            that blend functionality with flawless design. With a strong
-            foundation in modern CSS frameworks, JavaScript and React, I
-            expertly bridge the gap between aesthetics and functionality,
-            delivering seamless web experiences that engage and inspire.
+            Driven by curiosity and a quiet sense of adventure, I stepped into web development four years ago. What began as a simple fascination gradually became a craft — a discipline shaped by precision, intention, and a deep respect for the harmony between form and function.
           </p>
 
           <p className="aboutTxt">
-            Passionate about staying at the forefront of industry trends, I
-            continually expand my skill set to incorporate cutting-edge
-            technologies and best practices. My expertise spans responsive
-            design, component-driven development, and efficient coding
-            methodologies. With a keen eye for detail and dedication to
-            precision, I consistently deliver high-quality solutions that exceed
-            client expectations.
+            I design and build digital experiences where elegance serves purpose. Every interface is approached with a careful eye, every interaction shaped to feel seamless, intuitive, and alive. My work lives at the intersection of responsive design, component-driven architecture, and clean, search-friendly code — structure beneath beauty, logic beneath motion.
           </p>
 
           <p className="aboutTxt">
-            Collaboration and continuous learning are at the core of my
-            approach. I thrive in team environments, sharing knowledge and
-            expertise to drive collective growth. With a portfolio showcasing
-            diverse projects and a relentless pursuit of excellence, I'm
-            committed to pushing the boundaries of what's possible in front-end
-            development.
+            In a field that never stands still, I remain a devoted student of the craft. As Kirill Korshikov reminds us, <span className="font-bold">“Never stop learning, because life never stops teaching.”</span> I carry this philosophy into every collaboration, every challenge, and every creation — refining not only what I build, but how I think.
+          </p>
+
+          <p className="aboutTxt">
+            This portfolio is a collection of that journey — evolving ideas, real-world solutions, and a continuous pursuit of clarity, excellence, and meaningful digital experiences.
           </p>
         </div>
 
@@ -91,7 +79,7 @@ const AboutSection = ({
               target="_blank"
               className="bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
             >
-              My CV/Resume
+              Download CV
             </a>
           </div>
         </div>
