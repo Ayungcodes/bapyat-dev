@@ -1,4 +1,4 @@
-import myImage from "/images/MyPhoto.JPG";
+// import myImage from "/images/MyPhoto.JPG";
 
 const AboutSection = ({
   state,
@@ -50,49 +50,49 @@ const AboutSection = ({
 
         {/* photo card */}
         <div
-          className={`flex flex-col justify-center space-y-2 items-center h-[68vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[68vh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
+          className={`flex flex-col justify-center space-y-2 items-center h-[75vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[73vh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
         >
-          <div className="relative h-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] w-[180px]">
+          <div className="relative h-[200px] w-[200px] md:h-[230px] md:w-[230px]">
             <img
-              src={myImage}
+              src="/images/DSC_5120a_122324.jpg"
               alt="my photo"
               className="h-full w-full object-cover rounded-full border-[2px] border-[#32FF87] shadow-md duration-700 hover:scale-105"
               onMouseEnter={handleHireTrue}
               onMouseLeave={handleHireFalse}
             />
             <div
-              className={`absolute top-1/2 left-1/2 flex justify-center items-center -translate-x-1/2 -translate-y-1/2 text-center transition-all ease-in-out duration-500 ${
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center transition-all ease-in-out duration-500 ${
                 state.hireState
-                  ? "opacity-100 bg-black/50 h-[180px] w-[180px] md:h-[230px] md:w-[230px] lg:h-[200px] lg:w-[200px] border-[1.5px] border-[#32FF87] rounded-full"
+                  ? "opacity-100 bg-black/50 h-[200px] w-[200px] md:h-[230px] md:w-[230px] border-[1.5px] border-[#32FF87] rounded-full"
                   : "h-0 opacity-0"
               }`}
             >
               <button
                 onClick={() => scrollToSection(contactRef)}
-                className={`cursor-pointer bg-[#32FF87] rounded-4xl text-[#0A0A0A] py-1 px-4 transition-all duration-200 hover:scale-95 hover:bg-[#ffff] md:text-[18px]`}
+                className={`absolute left-1/2 -translate-x-1/2 top-[70%] cursor-pointer bg-[#32FF87] rounded-4xl text-[#0A0A0A] py-0.5 px-4 transition-all duration-200 hover:scale-95 hover:bg-[#ffff] text-[14px] md:text-[16px]`}
               >
                 <a href="#hire-me">Hire Me</a>
               </button>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center space-y-2.5 mt-2 md:mt-4">
+          <div className="flex flex-col items-center justify-center space-y-2.5 mt-2 md:mt-5">
             <h1 className="text-[26px] md:text-3xl font-semibold font-[Sora]">
-            Gaius Emmanuel
-          </h1>
-          <h2 className="-mt-1 font-semibold text-[19px] md:text-[22px] font-[Sora]">
-            Frontend Web Developer
-          </h2>
-          <p className="text-center mx-8 md:mx-16 text-lg md:text-xl">
-            I turn ideas into smooth, interactive experiences. Code is my
-            language and the browser is my canvas.
-          </p>
-          <a
-            href="/My CV Resume.pdf"
-            target="_blank"
-            className="bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
-          >
-            My CV/Resume
-          </a>
+              Gaius Emmanuel
+            </h1>
+            <h2 className="mt-0.5 font-semibold text-[19px] md:text-[22px] font-[Sora]">
+              Frontend Web Developer
+            </h2>
+            <p className="text-center mx-8 md:mx-16 text-lg md:text-xl">
+              I turn ideas into smooth, interactive experiences. Code is my
+              language and the browser is my canvas.
+            </p>
+            <a
+              href="/My CV Resume.pdf"
+              target="_blank"
+              className="bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
+            >
+              My CV/Resume
+            </a>
           </div>
         </div>
       </div>
