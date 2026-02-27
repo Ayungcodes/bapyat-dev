@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
 @keyframes scroll {
-  0% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(6px); opacity: .4; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .animate-scroll {
   animation: scroll 1.8s ease-in-out infinite;
 }
-
 
 @font-face {
   font-family: "Ramilas";
@@ -24,5 +32,34 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 200;
   background-color: #000;
-  color: #D6D3D1;
+  color: #d6d3d1;
+}
+
+.meteor-head {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: white;
+  box-shadow:
+    0 0 8px #fff,
+    0 0 18px #fff,
+    0 0 35px #32ff87,
+    0 0 60px #32ff87;
+}
+
+.meteor-tail {
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(50, 255, 135, 0),
+    rgba(50, 255, 135, 0.7),
+    rgba(255, 255, 255, 1)
+  );
+  filter: blur(2px);
+  opacity: 0.9;
 }

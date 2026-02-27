@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Starfield from "../../components/Starfield";
+import Starfield from "../components/Starfield";
 
 function CosmicHero({ state, welcomeRef }) {
   const textRef = useRef(null);
@@ -8,67 +8,70 @@ function CosmicHero({ state, welcomeRef }) {
 
   const starRef = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline();
+    if (!state.loading) {
+      const tl = gsap.timeline();
 
-    gsap.set(starRef.current, {
-      x: -200,
-      y: -50,
-      opacity: 0,
-      scale: 0.3,
-      filter: "blur(2px)",
-    });
-
-    gsap.set(textRef.current, {
-      opacity: 0,
-      scale: 0.6,
-    });
-
-    tl.to(starRef.current, {
-      opacity: 1,
-      duration: 1,
-    })
-      .to(starRef.current, {
-        x: window.innerWidth / 2 - 50,
-        y: 60,
-        scale: 0.6,
-        duration: 0.6,
-        ease: "power3.out",
-      })
-
-      .to(starRef.current, {
-        scale: 2.5,
+      gsap.set(starRef.current, {
+        x: -300,
+        y: -120,
         opacity: 0,
-        duration: 0.3,
-        filter: "blur(8px)",
-        ease: "power2.inOut",
-      })
+        scale: 0.6,
+        rotate: 20,
+      });
 
-      .to(
-        textRef.current,
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.7,
+      gsap.set(textRef.current, {
+        opacity: 0,
+        scale: 0.6,
+      });
+
+      tl.to(starRef.current, {
+        opacity: 1,
+        duration: 0.2,
+      })
+        .to(starRef.current, {
+          x: window.innerWidth / 2 - 40,
+          y: 80,
+          duration: 0.9,
           ease: "power3.out",
-        },
-        "-=0.2"
-      );
-  }, []);
+        })
+
+        .to(starRef.current, {
+          scale: 3.5,
+          opacity: 0,
+          duration: 0.25,
+          ease: "power2.inOut",
+        })
+
+        .to(
+          textRef.current,
+          {
+            opacity: 1,
+            y: 40,
+            scale: 0.95,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.1",
+        );
+    }
+  }, [state.loading]);
 
   useEffect(() => {
-    const letters = welcomeTextRef.current.querySelectorAll("span");
+    if (!state.loading) {
+      const letters = welcomeTextRef.current.querySelectorAll("span");
 
-    gsap.to(letters, {
-      filter: "drop-shadow(0 0 6px rgba(99,91,255,0.6))",
-      duration: 2.8,
-      yoyo: true,
-      color: "#32ff87",
-      repeat: -1,
-      ease: "sine.inOut",
-      stagger: 0.06,
-      overwrite: "auto",
-    });
-  }, []);
+      gsap.to(letters, {
+        filter: "drop-shadow(0 0 6px rgba(99,91,255,0.6))",
+        duration: 2.8,
+        yoyo: true,
+        color: "#32ff87",
+        repeat: -1,
+        ease: "sine.inOut",
+        stagger: 0.06,
+        overwrite: "auto",
+      });
+    }
+  }, [state.loading]);
 
   return (
     <section
@@ -78,15 +81,15 @@ function CosmicHero({ state, welcomeRef }) {
       }`}
     >
       <div className="w-full h-[80vh] flex flex-col mt-11 md:flex-row items-center justify-center px-6 md:gap-14">
-        <Starfield />
+        <Starfield state={state} />
         <div className="w-[85vw] md:w-[70vw] lg:w-[60vw]">
-          <div
-            ref={starRef}
-            className="absolute w-1 h-1 rounded-full bg-white shadow-[0_0_15px_5px_white] opacity-0"
-            style={{
-              boxShadow: "0 0 25px 10px rgba(255,255,255,0.8)",
-            }}
-          ></div>
+          <div ref={starRef} className="absolute opacity-0 pointer-events-none">
+            {/* head */}
+            <div className="meteor-head" />
+
+            {/* tail */}
+            <div className="meteor-tail" />
+          </div>
           <div
             ref={textRef}
             className="flex flex-col justify-center items-center opacity-0 scale-90"
@@ -120,8 +123,9 @@ function CosmicHero({ state, welcomeRef }) {
                 Gaius Emmanuel,
               </span>{" "}
               a Frontend Web Developer{" "}
-              <span className="">blending code with cosmic energy to craft
-                interfaces that feel alive.
+              <span className="">
+                blending code with cosmic energy to craft interfaces that feel
+                alive.
               </span>
             </p>
           </div>

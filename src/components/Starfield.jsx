@@ -1,35 +1,37 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const Starfield = ({ count = 120 }) => {
+const Starfield = ({ state, count = 120 }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const stars = gsap.utils.toArray(containerRef.current.children);
+    if (!state.loading) {
+      const stars = gsap.utils.toArray(containerRef.current.children);
 
-    // Twinkle anim
-    gsap.to(stars, {
-      opacity: () => gsap.utils.random(0.2, 1),
-      scale: () => gsap.utils.random(1, 1.7),
-      duration: () => gsap.utils.random(1.5, 3),
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut",
-      stagger: {
-        each: 0.03,
+      // Twinkle anim
+      gsap.to(stars, {
+        opacity: () => gsap.utils.random(0.2, 1),
+        scale: () => gsap.utils.random(1, 1.7),
+        duration: () => gsap.utils.random(1.5, 3),
         repeat: -1,
-      },
-    });
+        yoyo: true,
+        ease: "power1.inOut",
+        stagger: {
+          each: 0.03,
+          repeat: -1,
+        },
+      });
 
-    gsap.to(stars, {
-      x: () => gsap.utils.random(-15, 15),
-      y: () => gsap.utils.random(-15, 15),
-      duration: () => gsap.utils.random(8, 14),
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-  }, []);
+      gsap.to(stars, {
+        x: () => gsap.utils.random(-15, 15),
+        y: () => gsap.utils.random(-15, 15),
+        duration: () => gsap.utils.random(8, 14),
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+    }
+  }, [state.loading]);
 
   return (
     <div

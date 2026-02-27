@@ -11,8 +11,10 @@ import Projects from "./sections/Projects";
 import TechStack from "./sections/TechStack";
 import ContactMe from "./sections/ContactMe";
 import CosmicHero from "./sections/CosmicHero";
-import Starfield from "../components/Starfield";
+import Starfield from "./components/Starfield";
 import PromiseSection from "./sections/PromiseSection";
+import Loader from "./components/Loader";
+
 gsap.registerPlugin(ScrollSmoother, ScrollSmoother, ScrollTrigger);
 
 const App = () => {
@@ -20,9 +22,10 @@ const App = () => {
     openNav: false,
     hireState: false,
     status: "idle",
-    // loading: true,
+    loading: true,
   });
 
+  // form submission handler
   const handleSubmit = async (e) => {
     e.preventDefault();
     setState((prevState) => ({
@@ -30,6 +33,7 @@ const App = () => {
       status: "sending",
     }));
 
+    // Using Formspree for form handling
     const formData = new FormData(e.target);
     const response = await fetch("https://formspree.io/f/mrbarzay", {
       method: "POST",
@@ -53,6 +57,7 @@ const App = () => {
     }
   };
 
+  // smooth scrolling with lenis
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -68,20 +73,20 @@ const App = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  // useEffect(() => {
-  //   const handleLoad = () => {
-  //     setTimeout(() => {
-  //       setState((prevState) => ({
-  //         ...prevState,
-  //         loading: false,
-  //       }));
-  //     }, 2000);
-  //   };
+  useEffect(() => {
+    const handleLoad = () => {
+      setTimeout(() => {
+        setState((prevState) => ({
+          ...prevState,
+          loading: false,
+        }));
+      }, 2000);
+    };
 
-  //   window.addEventListener("load", handleLoad);
+    window.addEventListener("load", handleLoad);
 
-  //   return () => window.removeEventListener("load", handleLoad);
-  // }, []);
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
 
   const welcomeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -121,26 +126,13 @@ const App = () => {
     }, 3000);
   };
 
+  if (state.loading) return <Loader />;
+
   return (
     <main
       className={`min-h-screen max-w-[100vw] overflow-x-hidden selection:bg-gray-500`}
     >
-      {state.loading && (
-        <div className="fixed inset-0 flex items-center justify-center bg-[#0d1117] z-99999">
-          {/* <BallTriangle
-              height={100}
-              width={100}
-              radius={5}
-              color="#635bff"
-              ariaLabel="ball-triangle-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={true}
-            /> */}
-        </div>
-      )}
-
-      <Starfield />
+      <Starfield state={state} />
       {/* navigation area */}
 
       <div id="smooth-wrapper">
