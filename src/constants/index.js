@@ -3,7 +3,8 @@ export const projectsArr = [
     id: "project 0",
     photo: "/images/devlog.png",
     name: "DevLog",
-    description: "DevLog is a fullstack developer journaling app built with React, Tailwind, and Express. It showcases API design, monorepo structure, and real-world deployment using Render and Vercel — part of my transition from frontend to fullstack development."
+    description: "DevLog is a fullstack developer journaling app built with React, Tailwind, and Express. It showcases API design, monorepo structure, and real-world deployment using Render and Vercel — part of my transition from frontend to fullstack development.",
+    link: "https://devlog-drab-psi.vercel.app/",
   },
   {
     id: "project 1",
