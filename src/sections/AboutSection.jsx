@@ -75,7 +75,7 @@ const AboutSection = ({
               language and the browser is my canvas.
             </p>
             <a
-              href="/My CV Resume.pdf"
+              href="/My original CV.pdf"
               target="_blank"
               className="bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
             >

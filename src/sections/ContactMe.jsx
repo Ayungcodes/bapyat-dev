@@ -62,7 +62,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                       >
                         <div className="group">
                           <span className="transition-all duration-500 hover:opacity-65 tracking-tighter">
-                            +234 701 137 2616
+                            +234 813 729 7521
                           </span>
                         </div>
                       </a>
