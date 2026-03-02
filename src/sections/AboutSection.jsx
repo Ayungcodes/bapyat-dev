@@ -20,7 +20,7 @@ const AboutSection = ({
       <div className="lg:mx-14 flex flex-col items-center justify-center lg:-space-y-30 -space-y-16 lg:flex-row md:space-x-14 rounded-3xl">
         <div className="text-lg space-y-5 mx-6 md:text-xl lg:w-[48%]">
           <p className="aboutTxt">
-            Driven by curiosity and a quiet sense of adventure, I stepped into web development four years ago. What began as a simple fascination gradually became a craft — a discipline shaped by precision, intention, and a deep respect for the harmony between form and function.
+            Driven by curiosity and a quiet sense of adventure, I stepped into web development three years ago. What began as a simple fascination gradually became a craft — a discipline shaped by precision, intention, and a deep respect for the harmony between form and function.
           </p>
 
           <p className="aboutTxt">
