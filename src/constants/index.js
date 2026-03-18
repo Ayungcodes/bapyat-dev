@@ -3,7 +3,8 @@ export const projectsArr = [
     id: "project 0",
     photo: "/images/devlog.png",
     name: "DevLog",
-    description: "DevLog is a fullstack developer journaling app built with React, Tailwind, and Express. It showcases API design, monorepo structure, and real-world deployment using Render and Vercel — part of my transition from frontend to fullstack development.",
+    description:
+      "DevLog is a fullstack developer journaling app built with React, Tailwind, and Express. It showcases API design, monorepo structure, and real-world deployment using Render and Vercel — part of my transition from frontend to fullstack development.",
     link: "https://devlog-drab-psi.vercel.app/",
   },
   {
@@ -38,6 +39,14 @@ export const projectsArr = [
       "A luxury watch shop built with React and Tailwind CSS, blending performance and design into a smooth, elegant experience. Every scroll, hover, and transition mirrors the precision and polish of the timepieces themselves.",
     link: "https://luxury-watch-shop-neon.vercel.app/",
   },
+
+  {
+    id: "project 5",
+    photo: "/images/Screenshot (316).png",
+    name: "NeuraFlow",
+    description: "NeuraFlow is a modern AI SaaS landing page built with React, Tailwind CSS, and Framer Motion. It features smooth animations, a cinematic AI demo, and a dynamic dashboard preview, all designed to replicate a real-world product experience with a focus on performance and clean UI.",
+    link: "https://neuraflow-e3uzyyrnd-gaius-emmanuels-projects.vercel.app/"
+  }
 ];
 
 export const promises = [

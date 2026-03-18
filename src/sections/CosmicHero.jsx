@@ -2,9 +2,14 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Starfield from "../components/Starfield";
 
-function CosmicHero({ state, welcomeRef }) {
+function CosmicHero({
+  state,
+  welcomeRef,
+  contactRef,
+  projectsRef,
+  scrollToSection,
+}) {
   const textRef = useRef(null);
-  const welcomeTextRef = useRef(null);
 
   const starRef = useRef(null);
   useEffect(() => {
@@ -56,23 +61,6 @@ function CosmicHero({ state, welcomeRef }) {
     }
   }, [state.loading]);
 
-  useEffect(() => {
-    if (!state.loading) {
-      const letters = welcomeTextRef.current.querySelectorAll("span");
-
-      gsap.to(letters, {
-        filter: "drop-shadow(0 0 6px rgba(99,91,255,0.6))",
-        duration: 2.8,
-        yoyo: true,
-        color: "#32ff87",
-        repeat: -1,
-        ease: "sine.inOut",
-        stagger: 0.06,
-        overwrite: "auto",
-      });
-    }
-  }, [state.loading]);
-
   return (
     <section
       ref={welcomeRef}
@@ -92,42 +80,46 @@ function CosmicHero({ state, welcomeRef }) {
           </div>
           <div
             ref={textRef}
-            className="flex flex-col justify-center items-center opacity-0 scale-90"
+            className="flex flex-col justify-center items-center opacity-0 scale-90 gap-5 text-center"
           >
-            <h1
-              ref={welcomeTextRef}
-              className={`text-[26px] md:text-[32px] font-[Cormorant] font-semibold flex flex-wrap gap-[1px]`}
-            >
-              <span>H</span>
-              <span>i</span>
-              <span>&nbsp;</span>
-              <span>a</span>
-              <span>n</span>
-              <span>d</span>
-              <span>&nbsp;</span>
-              <span>w</span>
-              <span>e</span>
-              <span>l</span>
-              <span>c</span>
-              <span>o</span>
-              <span>m</span>
-              <span>e</span>
-              <span>🧙🏾‍♂️</span>
+            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#32FF87]/30 bg-[#32FF87]/5 text-[#32FF87] text-xs font-semibold font-[Sora] tracking-widest uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#32FF87] shadow-[0_0_6px_#32FF87] animate-pulse" />
+              Available for freelance & full-time roles
+            </div>
+
+            <h1 className="text-4xl md:text-6xl font-extrabold font-[Sora] leading-tight max-w-3xl">
+              I'm{" "}
+              <span className="text-[#32FF87] drop-shadow-[0_0_12px_rgba(50,255,135,0.4)]">
+                Gaius Emmanuel
+              </span>{" "}
+              — I build fast, beautiful web apps that help businesses grow.
             </h1>
 
-            <p className="text-center text-2xl md:text-3xl font-extrabold font-[Sora] leading-11">
-              I'm{" "}
-              <span
-                className={`text-transparent font-extralight [-webkit-text-stroke:2px_#D6D3D1]`}
-              >
-                Gaius Emmanuel,
+            <div className="w-10 h-0.5 rounded-full bg-gradient-to-r from-[#32FF87] to-transparent opacity-60" />
+
+            <p className="text-sm md:text-base font-[Sora] text-white/50 max-w-lg leading-relaxed">
+              <span className="text-white/80 font-semibold">
+                React · Node.js · MongoDB
               </span>{" "}
-              a Frontend Web Developer{" "}
-              <span className="">
-                blending code with cosmic energy to craft interfaces that feel
-                alive.
-              </span>
+              · Full-stack developer crafting responsive, high-quality
+              experiences for startups and businesses worldwide.
             </p>
+
+            <div className="flex gap-3 flex-wrap justify-center mt-1">
+              <button
+                onClick={() => scrollToSection(projectsRef)}
+                className="px-6 py-2.5 rounded-full bg-[#32ff87] text-black font-bold font-[Sora] text-sm hover:shadow-[0_0_20px_rgba(50,255,135,0.4)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              >
+                See my work
+              </button>
+
+              <button
+                onClick={() => scrollToSection(contactRef)}
+                className="px-6 py-2.5 rounded-full border border-[#32FF87]/40 text-white font-bold font-[Sora] text-sm hover:border-[#32FF87] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              >
+                Get in touch
+              </button>
+            </div>
           </div>
         </div>
       </div>

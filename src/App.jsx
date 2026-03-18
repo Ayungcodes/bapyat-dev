@@ -153,7 +153,7 @@ const App = () => {
           />
 
           {/* welcome section */}
-          <CosmicHero state={state} welcomeRef={welcomeRef} />
+          <CosmicHero state={state} welcomeRef={welcomeRef} contactRef={contactRef} projectsRef={projectsRef} scrollToSection={scrollToSection} />
         </div>
       </div>
 

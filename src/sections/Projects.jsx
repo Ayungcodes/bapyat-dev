@@ -99,7 +99,7 @@ const Projects = ({ state, projectsRef }) => {
           id="view-all-projects"
           href="https://github.com/Ayungcodes?tab=repositories"
           target="_blank"
-          className={`py-1 px-10 md:text-xl transition duration-500 cursor-pointer rounded-4xl bg-[#32FF87] text-[#0a0a0a] hover:opacity-80 hover:scale-95 hover:bg-[#ffff]`}
+          className={`py-1 px-10 md:text-xl transition duration-500 cursor-pointer rounded-4xl bg-[#32FF87] text-[#0a0a0a] font-[Sora] font-bold text-sm hover:opacity-80 hover:scale-95 hover:bg-[#ffff]`}
         >
           View All
         </a>

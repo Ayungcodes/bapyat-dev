@@ -218,14 +218,14 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
             openNav: false,
           }));
         }}
-        className="py-1 px-8 md:px-12 transition-all duration-500 cursor-pointer hover:scale-95 hover:bg-white rounded-full bg-[#32ff87] text-[#0A0A0A]"
+        className="py-1 px-8 md:px-12 transition-all duration-500 cursor-pointer hover:scale-95 hover:bg-white rounded-full bg-[#32ff87] text-[#0A0A0A] text-[Sora] font-bold"
         style={{
           transitionDelay: `${(5 + 5) * 100}ms`,
           opacity: state.openNav ? 1 : 0,
           transform: state.openNav ? "translateY(0)" : "translateY(20px)",
         }}
       >
-        Hire Me
+        Hire me
       </button>
     </div>
 

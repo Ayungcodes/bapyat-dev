@@ -57,7 +57,7 @@ const AboutSection = ({
             >
               <button
                 onClick={() => scrollToSection(contactRef)}
-                className={`absolute left-1/2 -translate-x-1/2 top-[70%] cursor-pointer bg-[#32FF87] rounded-4xl text-[#0A0A0A] py-0.5 px-4 transition-all duration-200 hover:scale-95 hover:bg-[#ffff] text-[14px] md:text-[16px]`}
+                className={`absolute left-1/2 -translate-x-1/2 top-[70%] cursor-pointer bg-[#32FF87] rounded-4xl text-[#0A0A0A] py-0.5 px-4 transition-all duration-200 hover:scale-95 hover:bg-[#ffff] text-sm md:text-[16px] font-[Sora] font-bold`}
               >
                 <a href="#hire-me">Hire Me</a>
               </button>
@@ -68,7 +68,7 @@ const AboutSection = ({
               Gaius Emmanuel
             </h1>
             <h2 className="mt-0.5 font-semibold text-[19px] md:text-[22px] font-[Sora]">
-              Frontend Web Developer
+              Frontend Developer → Fullstack in process
             </h2>
             <p className="text-center mx-8 md:mx-16 text-lg md:text-xl">
               I turn ideas into smooth, interactive experiences. Code is my
@@ -77,7 +77,7 @@ const AboutSection = ({
             <a
               href="/My original CV.pdf"
               target="_blank"
-              className="bg-[#32ff87] text-[#0A0A0A] px-4 py-1 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
+              className="bg-[#32ff87] text-[#0A0A0A] font-[Sora] font-bold text-sm px-5 py-2 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
             >
               Download CV
             </a>
