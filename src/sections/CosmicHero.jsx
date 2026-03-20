@@ -68,7 +68,7 @@ function CosmicHero({
         state.openNav ? "blur-sm" : "blur-none"
       }`}
     >
-      <div className="w-full h-[80vh] flex flex-col mt-11 md:flex-row items-center justify-center px-6 md:gap-14">
+      <div className="w-full h-[80vh] flex flex-col md:flex-row items-center justify-center px-6 md:gap-14">
         <Starfield state={state} />
         <div className="w-[85vw] md:w-[70vw] lg:w-[60vw]">
           <div ref={starRef} className="absolute opacity-0 pointer-events-none">
@@ -82,12 +82,12 @@ function CosmicHero({
             ref={textRef}
             className="flex flex-col justify-center items-center opacity-0 scale-90 gap-5 text-center"
           >
-            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#32FF87]/30 bg-[#32FF87]/5 text-[#32FF87] text-xs font-semibold font-[Sora] tracking-widest uppercase">
+            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#32FF87]/30 bg-[#32FF87]/5 text-[#32FF87] text-[9px] font-semibold font-[Sora] tracking-widest uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-[#32FF87] shadow-[0_0_6px_#32FF87] animate-pulse" />
               Available for freelance & full-time roles
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold font-[Sora] leading-tight max-w-3xl">
+            <h1 className="text-3xl md:text-6xl font-extrabold font-[Sora] leading-tight max-w-3xl">
               I'm{" "}
               <span className="text-[#32FF87] drop-shadow-[0_0_12px_rgba(50,255,135,0.4)]">
                 Gaius Emmanuel
@@ -108,14 +108,14 @@ function CosmicHero({
             <div className="flex gap-3 flex-wrap justify-center mt-1">
               <button
                 onClick={() => scrollToSection(projectsRef)}
-                className="px-6 py-2.5 rounded-full bg-[#32ff87] text-black font-bold font-[Sora] text-sm hover:shadow-[0_0_20px_rgba(50,255,135,0.4)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                className="px-6 py-2 rounded-full bg-[#32ff87] text-black font-bold font-[Sora] text-sm hover:shadow-[0_0_20px_rgba(50,255,135,0.4)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 See my work
               </button>
 
               <button
                 onClick={() => scrollToSection(contactRef)}
-                className="px-6 py-2.5 rounded-full border border-[#32FF87]/40 text-white font-bold font-[Sora] text-sm hover:border-[#32FF87] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                className="px-6 py-2 rounded-full border border-[#32FF87]/40 text-white font-bold font-[Sora] text-sm hover:border-[#32FF87] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 Get in touch
               </button>
