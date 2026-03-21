@@ -9,6 +9,14 @@ export const projectsArr = [
   },
   {
     id: "project 1",
+    photo: "/images/Untitled design (2).png",
+    name: "Movue",
+    description:
+      "Movue is a full-stack movie discovery platform built with React and Express, powered by the TMDB API and AI recommendations. It lets users explore trending, top-rated, and genre-based movies, view detailed information, watch trailers, and find streaming providers. It also features an AI concierge that suggests movies based on user prompts, delivering a personalized and modern movie browsing experience",
+    link: "https://movue-woad.vercel.app/",
+  },
+  {
+    id: "project 2",
     photo: "/images/dashboard.png",
     name: "Freelancer Dashboard",
     description:
@@ -16,7 +24,7 @@ export const projectsArr = [
     link: "https://freelancer-dashboard-alpha.vercel.app/",
   },
   {
-    id: "project 2",
+    id: "project 3",
     photo: "/images/savora.png",
     name: "Savora",
     description:
@@ -24,7 +32,7 @@ export const projectsArr = [
     link: "https://savora-restaurant.vercel.app/",
   },
   {
-    id: "project 3",
+    id: "project 4",
     photo: "/images/cookieJar.png",
     name: "The Cookie Jar",
     description:
@@ -32,7 +40,7 @@ export const projectsArr = [
     link: "https://cookie-jar-mu.vercel.app/",
   },
   {
-    id: "project 4",
+    id: "project 5",
     photo: "/images/luxuryWatch.png",
     name: "Luxury Watch E-commerce Site",
     description:
@@ -41,12 +49,13 @@ export const projectsArr = [
   },
 
   {
-    id: "project 5",
+    id: "project 6",
     photo: "/images/Screenshot (316).png",
     name: "NeuraFlow",
-    description: "NeuraFlow is a modern AI SaaS landing page built with React, Tailwind CSS, and Framer Motion. It features smooth animations, a cinematic AI demo, and a dynamic dashboard preview, all designed to replicate a real-world product experience with a focus on performance and clean UI.",
-    link: "https://neuraflow-e3uzyyrnd-gaius-emmanuels-projects.vercel.app/"
-  }
+    description:
+      "NeuraFlow is a modern AI SaaS landing page built with React, Tailwind CSS, and Framer Motion. It features smooth animations, a cinematic AI demo, and a dynamic dashboard preview, all designed to replicate a real-world product experience with a focus on performance and clean UI.",
+    link: "https://neuraflow-e3uzyyrnd-gaius-emmanuels-projects.vercel.app/",
+  },
 ];
 
 export const promises = [
