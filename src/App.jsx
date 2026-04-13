@@ -10,8 +10,7 @@ import AboutSection from "./sections/AboutSection";
 import Projects from "./sections/Projects";
 import TechStack from "./sections/TechStack";
 import ContactMe from "./sections/ContactMe";
-import CosmicHero from "./sections/CosmicHero";
-import Starfield from "./components/Starfield";
+import Hero from "./sections/Hero";
 import PromiseSection from "./sections/PromiseSection";
 import Loader from "./components/Loader";
 
@@ -132,7 +131,6 @@ const App = () => {
     <main
       className={`min-h-screen max-w-[100vw] overflow-x-hidden selection:bg-gray-500`}
     >
-      <Starfield state={state} />
       {/* navigation area */}
 
       <div id="smooth-wrapper">
@@ -153,7 +151,7 @@ const App = () => {
           />
 
           {/* welcome section */}
-          <CosmicHero state={state} welcomeRef={welcomeRef} contactRef={contactRef} projectsRef={projectsRef} scrollToSection={scrollToSection} />
+          <Hero state={state} welcomeRef={welcomeRef} contactRef={contactRef} projectsRef={projectsRef} scrollToSection={scrollToSection} />
         </div>
       </div>
 

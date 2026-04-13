@@ -28,9 +28,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
           >
             <span
               className="
-      text-[#32ff87]
-      transition-all duration-300
-      hover:[text-shadow:0_0_8px_#32ff87,0_0_16px_#32ff87,0_0_32px_#32ff87]
+      text-yellow-600
     "
             >
               Bapyat
@@ -218,7 +216,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
             openNav: false,
           }));
         }}
-        className="py-1 px-8 md:px-12 transition-all duration-500 cursor-pointer hover:scale-95 hover:bg-white rounded-full bg-[#32ff87] text-[#0A0A0A] text-[Sora] font-bold"
+        className="py-1 px-8 md:px-12 transition-all duration-500 cursor-pointer hover:scale-95 hover:bg-white rounded-full bg-yellow-600 text-[#0A0A0A] text-[Sora] font-bold"
         style={{
           transitionDelay: `${(5 + 5) * 100}ms`,
           opacity: state.openNav ? 1 : 0,
@@ -232,7 +230,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
     {/* footer */}
     <div className="absolute bottom-0 flex items-center justify-center w-full h-10 p-4 text-[14px] md:text-xl">
       <h2>
-        Crafted by <span className="text-[#32ff87]">Gaius Emmanuel.</span>
+        Crafted by <span className="text-yellow-500">Gaius Emmanuel.</span>
       </h2>
     </div>
   </div>
