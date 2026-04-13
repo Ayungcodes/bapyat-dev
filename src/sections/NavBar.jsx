@@ -20,7 +20,7 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
             }}
             ref={logoRef}
             className="
-    font-[fredoka] text-xl md:text-3xl
+    font-semibold text-lg md:text-2xl tracking-wider
     cursor-pointer z-50
     transition-all duration-500 ease-out
     hover:scale-105
@@ -28,19 +28,18 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
           >
             <span
               className="
-      text-yellow-600
+      text-white-90 duration-300 transition-all hover:text-yellow-600
     "
             >
-              Bapyat
+              Gaius.
             </span>
-            <span
+            {/* <span
               className="
       transition-all duration-300
-      hover:[text-shadow:0_0_6px_#ffffff,0_0_14px_#32ff87]
     "
             >
               .dev
-            </span>
+            </span> */}
           </button>
         </div>
 
@@ -142,100 +141,111 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
       </div>
 
       {/* mobile nav */}
-<div
-  className={`fixed top-0 left-0 w-full h-screen z-50 bg-black/80 backdrop-blur-sm transition-all duration-500 ease-out
+      <div
+        className={`fixed top-0 left-0 w-full h-screen z-50 bg-black/80 backdrop-blur-sm transition-all duration-500 ease-out
     ${state.openNav ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-10"}
   `}
->
-  <div className="absolute top-0 right-0 lg:hidden w-full h-full flex flex-col justify-center px-6">
-    <div className="flex flex-row w-full justify-around items-start mx-auto space-x-10">
-
-      {/* nav link */}
-      <div className="flex flex-col items-start space-y-7 font-semibold">
-        <h3 className="text-[16px] md:text-[18px] text-gray-400">Menu</h3>
-        {[
-          { label: "Home", ref: welcomeRef },
-          { label: "About", ref: aboutRef },
-          { label: "Projects", ref: projectsRef },
-          { label: "Skills", ref: skillsRef },
-          { label: "Contact", ref: contactRef },
-        ].map((item, idx) => (
-          <button
-            key={item.label}
-            onClick={() => {
-              scrollToSection(item.ref);
-              setState((state.openNav = false));
-            }}
-            className={`transition-all transform cursor-pointer hover:text-white`}
-            style={{
-              transitionDelay: `${idx * 100}ms`,
-              opacity: state.openNav ? 1 : 0,
-              transform: state.openNav ? "translateY(0)" : "translateY(20px)",
-            }}
-          >
-            {item.label}
-          </button>
-        ))}
-      </div>
-
-      {/* social links */}
-      <div className="flex flex-col items-start space-y-7 font-semibold">
-        <h3 className="text-[16px] md:text-[18px] text-gray-400">Socials</h3>
-        {[
-          { label: "LinkedIn", href: "https://www.linkedin.com/in/gaius-emmanuel-b10279202/" },
-          { label: "GitHub", href: "https://github.com/Ayungcodes" },
-          { label: "Twitter/X", href: "https://x.com/Ayungclassics" },
-          { label: "Instagram", href: "https://www.instagram.com/ayungclassic/" },
-          { label: "Fiverr", href: "https://www.fiverr.com/s/0bxeZ3v" },
-        ].map((item, idx) => (
-          <a
-            key={item.label}
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-all transform underline hover:text-white"
-            style={{
-              transitionDelay: `${(idx + 5) * 100}ms`,
-              opacity: state.openNav ? 1 : 0,
-              transform: state.openNav ? "translateY(0)" : "translateY(20px)",
-            }}
-          >
-            {item.label}
-          </a>
-        ))}
-      </div>
-    </div>
-
-    {/* hire me btn */}
-    <div className="mx-auto mt-14">
-      <button
-        onClick={() => {
-          scrollToSection(contactRef);
-          setState((prevState) => ({
-            ...prevState,
-            openNav: false,
-          }));
-        }}
-        className="py-1 px-8 md:px-12 transition-all duration-500 cursor-pointer hover:scale-95 hover:bg-white rounded-full bg-yellow-600 text-[#0A0A0A] text-[Sora] font-bold"
-        style={{
-          transitionDelay: `${(5 + 5) * 100}ms`,
-          opacity: state.openNav ? 1 : 0,
-          transform: state.openNav ? "translateY(0)" : "translateY(20px)",
-        }}
       >
-        Hire me
-      </button>
-    </div>
+        <div className="absolute top-0 right-0 lg:hidden w-full h-full flex flex-col justify-center px-6">
+          <div className="flex flex-row w-full justify-around items-start mx-auto space-x-10">
+            {/* nav link */}
+            <div className="flex flex-col items-start space-y-7 font-semibold">
+              <h3 className="text-[16px] md:text-[18px] text-gray-400">Menu</h3>
+              {[
+                { label: "Home", ref: welcomeRef },
+                { label: "About", ref: aboutRef },
+                { label: "Projects", ref: projectsRef },
+                { label: "Skills", ref: skillsRef },
+                { label: "Contact", ref: contactRef },
+              ].map((item, idx) => (
+                <button
+                  key={item.label}
+                  onClick={() => {
+                    scrollToSection(item.ref);
+                    setState((state.openNav = false));
+                  }}
+                  className={`transition-all transform cursor-pointer hover:text-white`}
+                  style={{
+                    transitionDelay: `${idx * 100}ms`,
+                    opacity: state.openNav ? 1 : 0,
+                    transform: state.openNav
+                      ? "translateY(0)"
+                      : "translateY(20px)",
+                  }}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
 
-    {/* footer */}
-    <div className="absolute bottom-0 flex items-center justify-center w-full h-10 p-4 text-[14px] md:text-xl">
-      <h2>
-        Crafted by <span className="text-yellow-500">Gaius Emmanuel.</span>
-      </h2>
-    </div>
-  </div>
-</div>
+            {/* social links */}
+            <div className="flex flex-col items-start space-y-7 font-semibold">
+              <h3 className="text-[16px] md:text-[18px] text-gray-400">
+                Socials
+              </h3>
+              {[
+                {
+                  label: "LinkedIn",
+                  href: "https://www.linkedin.com/in/gaius-emmanuel-b10279202/",
+                },
+                { label: "GitHub", href: "https://github.com/Ayungcodes" },
+                { label: "Twitter/X", href: "https://x.com/Ayungclassics" },
+                {
+                  label: "Instagram",
+                  href: "https://www.instagram.com/ayungclassic/",
+                },
+                { label: "Fiverr", href: "https://www.fiverr.com/s/0bxeZ3v" },
+              ].map((item, idx) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all transform underline hover:text-white"
+                  style={{
+                    transitionDelay: `${(idx + 5) * 100}ms`,
+                    opacity: state.openNav ? 1 : 0,
+                    transform: state.openNav
+                      ? "translateY(0)"
+                      : "translateY(20px)",
+                  }}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
 
+          {/* hire me btn */}
+          <div className="mx-auto mt-14">
+            <button
+              onClick={() => {
+                scrollToSection(contactRef);
+                setState((prevState) => ({
+                  ...prevState,
+                  openNav: false,
+                }));
+              }}
+              className="py-1 px-8 md:px-12 transition-all duration-500 cursor-pointer hover:scale-95 hover:bg-white rounded-full bg-yellow-600 text-[#0A0A0A] text-[Sora] font-bold"
+              style={{
+                transitionDelay: `${(5 + 5) * 100}ms`,
+                opacity: state.openNav ? 1 : 0,
+                transform: state.openNav ? "translateY(0)" : "translateY(20px)",
+              }}
+            >
+              Hire me
+            </button>
+          </div>
+
+          {/* footer */}
+          <div className="absolute bottom-0 flex items-center justify-center w-full h-10 p-4 text-[14px] md:text-xl">
+            <h2>
+              Crafted by{" "}
+              <span className="text-yellow-500">Gaius Emmanuel.</span>
+            </h2>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

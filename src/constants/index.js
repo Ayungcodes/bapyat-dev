@@ -33,11 +33,11 @@ export const projectsArr = [
   },
   {
     id: "project 4",
-    photo: "/images/cookieJar.png",
-    name: "The Cookie Jar",
+    photo: "/images/timcreative.png",
+    name: "Tim Creative",
     description:
-      "The Cookie Jar is a playful and responsive cookie shop built using React and TailwindCSS. Every detail — from the animations to the color palette — was crafted to give it a warm, inviting bakery feel while keeping it fast, modern, and buttery smooth on any device.",
-    link: "https://cookie-jar-mu.vercel.app/",
+      "A sleek, modern portfolio site built with React and Tailwind CSS, showcasing a clean design, smooth animations, and a focus on performance. It’s a digital canvas that brings creativity to life, blending form and function into a seamless user experience.",
+    link: "https://timcreative.vercel.app/",
   },
   {
     id: "project 5",

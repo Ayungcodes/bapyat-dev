@@ -18,8 +18,8 @@ const Loader = () => {
         <div
           className="absolute inset-0 rounded-full border-4 border-transparent animate-spin"
           style={{
-            borderTopColor: "#32FF87",
-            borderRightColor: "#32FF87",
+            borderTopColor: "#ca8a04",
+            borderRightColor: "#ca8a04",
           }}
         />
       </div>
@@ -27,7 +27,7 @@ const Loader = () => {
       {/* site Name */}
       <h1
         className="mt-6 text-lg tracking-widest font-semibold"
-        style={{ color: "#32FF87" }}
+        style={{ color: "#ca8a04" }}
       >
         bapyat.dev
       </h1>

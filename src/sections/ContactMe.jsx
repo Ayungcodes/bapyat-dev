@@ -33,7 +33,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
                   <div className="text-[18px] md:text-xl -space-y-1">
                     <h2 className="tracking-tight">Gaius Emmanuel</h2>
                     <h3 className="text-gray-400 text-[15px] md:text-[18px]">
-                      Frontend Developer → Fullstack in process
+                      Full-Stack Web Developer
                     </h3>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const ContactMe = ({ state, handleSubmit, contactRef }) => {
           <button
             type="submit"
             disabled={state.status === "sending"}
-            className={`py-1 px-20 cursor-pointer transition duration-500 md:px-30 md:text-xl hover:scale-95 hover:bg-[#ffff] bg-[#32FF87] text-[#0a0a0a] rounded-full font-bold font-[Sora]`}
+            className={`py-1 px-20 cursor-pointer transition duration-500 md:px-30 md:text-xl hover:scale-95 hover:bg-[#ffff] bg-yellow-600 text-[#0a0a0a] rounded-full font-bold font-[Sora]`}
           >
             {state.status === "sending" ? "Shooting..." : "Shoot"}
           </button>

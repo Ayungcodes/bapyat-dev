@@ -180,7 +180,7 @@ const App = () => {
         contactRef={contactRef}
       />
 
-      <div className="flex justify-center items-center mt-32">
+      {/* <div className="flex justify-center items-center mt-32">
         <div
           className={`w-7 h-11 md:w-9 md:h-14 rounded-full border-2 backdrop-blur-sm bg-[#1e1e1e]/40 border-[#32FF87]/70 shadow-[0_0_15px_#0A3A1D] flex justify-center pt-3`}
         >
@@ -188,7 +188,7 @@ const App = () => {
             className={`w-1 h-2 md:h-2.5 md:w-1 bg-[#32FF87] rounded-full animate-scroll`}
           ></div>
         </div>
-      </div>
+      </div> */}
 
       {/* footer */}
       <footer className="w-screen shadow-2xl font-[Sora]">

@@ -20,7 +20,7 @@ const PromiseSection = ({ state }) => {
               key={promise.id}
               className="flex gap-3 bg-stone-900 border border-stone-700 rounded-xl p-6 mx-3 md:mx-5  transition-all duration-500 hover:border-stone-500 hover:-translate-y-1 shadow-lg"
             >
-              <span className="text-[#32FF87] text-xl">✔</span>
+              <span className="text-yellow-600 text-xl">✔</span>
               <div>
                 <h2 className="text-lg font-bold mb-2">{promise.title}</h2>
                 <p className="text-sm text-stone-300">{promise.description}</p>

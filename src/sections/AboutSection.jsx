@@ -14,25 +14,43 @@ const AboutSection = ({
       ref={aboutRef}
       className={`border-t-[3px] border-b-[3px] border-stone-800 py-14 pb-28 lg:pb-44 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
     >
-      <h1 className="text-center text-[33px] md:text-[38px] py-4 tracking-tight font-semibold font-[Sora]">
-        Developer in Focus.
-      </h1>
       <div className="lg:mx-14 flex flex-col items-center justify-center lg:-space-y-30 -space-y-16 lg:flex-row md:space-x-14 rounded-3xl">
         <div className="text-lg space-y-5 mx-6 md:text-xl lg:w-[48%]">
+          <h1 className="text-left text-[33px] -mb-2 md:text-[38px] py-4 tracking-tight font-semibold font-[Sora]">
+            Developer in Focus.
+          </h1>
           <p className="aboutTxt">
-            Driven by curiosity and a quiet sense of adventure, I stepped into web development three years ago. What began as a simple fascination gradually became a craft — a discipline shaped by precision, intention, and a deep respect for the harmony between form and function.
+            Driven by curiosity and a quiet sense of adventure, I stepped into
+            web development three years ago. What began as a simple fascination
+            gradually became a craft — a discipline shaped by precision,
+            intention, and a deep respect for the harmony between form and
+            function.
           </p>
 
           <p className="aboutTxt">
-            I design and build digital experiences where elegance serves purpose. Every interface is approached with a careful eye, every interaction shaped to feel seamless, intuitive, and alive. My work lives at the intersection of responsive design, component-driven architecture, and clean, search-friendly code — structure beneath beauty, logic beneath motion.
+            I design and build digital experiences where elegance serves
+            purpose. Every interface is approached with a careful eye, every
+            interaction shaped to feel seamless, intuitive, and alive. My work
+            lives at the intersection of responsive design, component-driven
+            architecture, and clean, search-friendly code — structure beneath
+            beauty, logic beneath motion.
           </p>
 
           <p className="aboutTxt">
-            In a field that never stands still, I remain a devoted student of the craft. As Kirill Korshikov reminds us, <span className="font-bold">“Never stop learning, because life never stops teaching.”</span> I carry this philosophy into every collaboration, every challenge, and every creation — refining not only what I build, but how I think.
+            In a field that never stands still, I remain a devoted student of
+            the craft. As Kirill Korshikov reminds us,{" "}
+            <span className="font-bold">
+              “Never stop learning, because life never stops teaching.”
+            </span>{" "}
+            I carry this philosophy into every collaboration, every challenge,
+            and every creation — refining not only what I build, but how I
+            think.
           </p>
 
           <p className="aboutTxt">
-            This portfolio is a collection of that journey — evolving ideas, real-world solutions, and a continuous pursuit of clarity, excellence, and meaningful digital experiences.
+            This portfolio is a collection of that journey — evolving ideas,
+            real-world solutions, and a continuous pursuit of clarity,
+            excellence, and meaningful digital experiences.
           </p>
         </div>
 
@@ -44,20 +62,20 @@ const AboutSection = ({
             <img
               src="/images/DSC_5120a_122324.jpg"
               alt="my photo"
-              className="h-full w-full object-cover rounded-full border-[2px] border-[#32FF87] shadow-md duration-700 hover:scale-105"
+              className="h-full w-full object-cover rounded-full border-[2px] border-yellow-600 shadow-md duration-700 hover:scale-105"
               onMouseEnter={handleHireTrue}
               onMouseLeave={handleHireFalse}
             />
             <div
               className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center transition-all ease-in-out duration-500 ${
                 state.hireState
-                  ? "opacity-100 bg-black/50 h-[200px] w-[200px] md:h-[230px] md:w-[230px] border-[1.5px] border-[#32FF87] rounded-full"
+                  ? "opacity-100 bg-black/50 h-[200px] w-[200px] md:h-[230px] md:w-[230px] border-[1.5px] border-yellow-600 rounded-full"
                   : "h-0 opacity-0"
               }`}
             >
               <button
                 onClick={() => scrollToSection(contactRef)}
-                className={`absolute left-1/2 -translate-x-1/2 top-[70%] cursor-pointer bg-[#32FF87] rounded-4xl text-[#0A0A0A] py-0.5 px-4 transition-all duration-200 hover:scale-95 hover:bg-[#ffff] text-sm md:text-[16px] font-[Sora] font-bold`}
+                className={`absolute left-1/2 -translate-x-1/2 top-[70%] cursor-pointer bg-yellow-600 rounded-4xl text-[#0A0A0A] py-0.5 px-4 transition-all duration-200 hover:scale-95 hover:bg-[#ffff] text-sm md:text-[16px] font-[Sora] font-bold`}
               >
                 <a href="#hire-me">Hire Me</a>
               </button>
@@ -68,7 +86,7 @@ const AboutSection = ({
               Gaius Emmanuel
             </h1>
             <h2 className="mt-0.5 font-semibold text-[19px] md:text-[22px] font-[Sora]">
-              Frontend Developer → Fullstack in process
+              Full-Stack Web Developer
             </h2>
             <p className="text-center mx-8 md:mx-16 text-lg md:text-xl">
               I turn ideas into smooth, interactive experiences. Code is my
@@ -77,7 +95,7 @@ const AboutSection = ({
             <a
               href="/My original CV.pdf"
               target="_blank"
-              className="bg-[#32ff87] text-[#0A0A0A] font-[Sora] font-bold text-sm px-5 py-2 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
+              className="bg-yellow-600 text-[#0A0A0A] font-[Sora] font-bold text-sm px-5 py-2 rounded-4xl transition-all  duration-200 hover:scale-95 hover:bg-[#ffff] mt-2"
             >
               Download CV
             </a>
