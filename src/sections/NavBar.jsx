@@ -9,9 +9,9 @@ const NavBar = ({ scrollToSection, refs, state, setState, toggleNav }) => {
 
   return (
     <nav
-      className={`navbar py-4 w-screen flex items-center fixed backdrop-blur-sm z-9999`}
+      className={`navbar py-4 w-full flex items-center fixed backdrop-blur-sm z-9999`}
     >
-      <div className="md:px-5 md:py-3 lg:px-7 flex items-center justify-between px-4 w-screen">
+      <div className="md:px-5 md:py-3 lg:px-24 flex items-center justify-between px-4 w-screen">
         {/* logo */}
         <div className="flex justify-center items-center gap-2">
           <button

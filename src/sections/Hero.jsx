@@ -8,7 +8,7 @@ function Hero({
   return (
     <section
       ref={welcomeRef}
-      className={`relative w-full min-h-screen flex items-center px-6 md:px-12 overflow-hidden bg-black ${
+      className={`relative w-full min-h-screen flex items-center px-6 md:px-12 lg:px-24 overflow-hidden bg-black ${
         state.openNav ? "blur-sm" : "blur-none"
       }`}
     >
@@ -29,6 +29,7 @@ function Hero({
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-yellow-600/15 animate-pulse duration-700 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl w-full flex flex-col items-start gap-6">
+        
         <p className="text-[15px] text-yellow-600 font-medium tracking-wide">
           <span className="text-white/60">—</span> Hello 👋🏾
         </p>
@@ -64,6 +65,7 @@ function Hero({
             Contact
           </button>
         </div>
+
       </div>
     </section>
   );

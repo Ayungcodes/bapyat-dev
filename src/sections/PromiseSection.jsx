@@ -3,7 +3,7 @@ import { promises } from "../constants";
 const PromiseSection = ({ state }) => {
   return (
     <section
-      className={`overflow-hidden border-t-[3px] border-b-[3px] border-stone-800 shadow-md mt-40 ${
+      className={`overflow-hidden border-t-[3px] border-b-[3px] border-stone-800 shadow-md mt-40 lg:px-24 ${
         state.openNav ? "blur-sm" : "blur-none"
       } space-y-16 flex flex-col justify-center py-20 sm:py-24 md:py-28`}
     >
