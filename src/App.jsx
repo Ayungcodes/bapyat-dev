@@ -79,7 +79,7 @@ const App = () => {
           ...prevState,
           loading: false,
         }));
-      }, 2000);
+      }, 3000);
     };
 
     window.addEventListener("load", handleLoad);
@@ -129,7 +129,7 @@ const App = () => {
 
   return (
     <main
-      className={`min-h-screen max-w-[100vw] overflow-x-hidden selection:bg-gray-500`}
+      className={`min-h-screen w-full overflow-x-hidden selection:bg-gray-500`}
     >
       {/* navigation area */}
 
