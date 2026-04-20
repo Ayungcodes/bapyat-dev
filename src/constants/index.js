@@ -95,7 +95,7 @@ export const techStack = [
   { id: 1, name: "HTML5", iconPath: "/images/html-5.png" },
   { id: 2, name: "CSS3", iconPath: "/images/css-3.png" },
   { id: 3, name: "JS", iconPath: "/images/js.png" },
-  { id: 4, name: "TypeScript", iconPath: "public/images/ts-logo-128.png" },
+  { id: 4, name: "TypeScript", iconPath: "/images/ts-logo-128.png" },
   {
     id: 5,
     name: "Tailwind",
