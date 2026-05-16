@@ -15,6 +15,7 @@ const AboutSection = ({
       className={`border-t-[3px] border-b-[3px] border-stone-800 py-14 pb-28 lg:pb-44 shadow-md ${state.openNav ? "blur-sm" : "blur-none"}`}
     >
       <div className="lg:mx-14 flex flex-col items-center justify-center lg:-space-y-30 -space-y-16 lg:flex-row md:space-x-14 rounded-3xl">
+        {/* item 1 */}
         <div className="text-lg space-y-5 mx-6 md:text-xl lg:w-[48%]">
           <h1 className="text-left text-[33px] -mb-2 md:text-[38px] py-4 tracking-tight font-semibold font-[Sora]">
             Developer in Focus.
@@ -54,7 +55,7 @@ const AboutSection = ({
           </p>
         </div>
 
-        {/* photo card */}
+        {/* photo card - item 2 */}
         <div
           className={`flex flex-col justify-center space-y-2 items-center h-[75vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[73vh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
         >
@@ -86,7 +87,7 @@ const AboutSection = ({
               Gaius Emmanuel
             </h1>
             <h2 className="mt-0.5 font-semibold text-[19px] md:text-[22px] font-[Sora]">
-              Full-Stack Web Developer
+              Front-End Web Developer
             </h2>
             <p className="text-center mx-8 md:mx-16 text-lg md:text-xl">
               I turn ideas into smooth, interactive experiences. Code is my

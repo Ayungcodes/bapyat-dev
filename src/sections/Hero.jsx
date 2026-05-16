@@ -35,7 +35,7 @@ function Hero({ state, welcomeRef, contactRef, projectsRef, scrollToSection }) {
           {/* heading */}
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
             I’m <span className="text-yellow-600">Gaius Emmanuel</span>
-            <br />a full-stack web developer.
+            <br />a front-end web developer.
           </h1>
 
           {/* subtext */}
