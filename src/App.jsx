@@ -1,10 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import Lenis from "lenis";
 // import { BallTriangle } from "react-loader-spinner";
-import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-import { ScrollSmoother, ScrollTrigger } from "gsap/all";
-
 import NavBar from "./sections/NavBar";
 import AboutSection from "./sections/AboutSection";
 import Projects from "./sections/Projects";
@@ -13,8 +9,6 @@ import ContactMe from "./sections/ContactMe";
 import Hero from "./sections/Hero";
 import PromiseSection from "./sections/PromiseSection";
 import Loader from "./components/Loader";
-
-gsap.registerPlugin(ScrollSmoother, ScrollSmoother, ScrollTrigger);
 
 const App = () => {
   const [state, setState] = useState({
@@ -64,12 +58,19 @@ const App = () => {
       smoothWheel: true,
     });
 
+    let rafId;
+
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
   }, []);
 
   useEffect(() => {
@@ -84,7 +85,14 @@ const App = () => {
 
     window.addEventListener("load", handleLoad);
 
-    return () => window.removeEventListener("load", handleLoad);
+    const fallback = setTimeout(() => {
+      setState((prev) => ({ ...prev, loading: false }));
+    }, 6000);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(fallback);
+    };
   }, []);
 
   const welcomeRef = useRef(null);
@@ -151,7 +159,13 @@ const App = () => {
           />
 
           {/* welcome section */}
-          <Hero state={state} welcomeRef={welcomeRef} contactRef={contactRef} projectsRef={projectsRef} scrollToSection={scrollToSection} />
+          <Hero
+            state={state}
+            welcomeRef={welcomeRef}
+            contactRef={contactRef}
+            projectsRef={projectsRef}
+            scrollToSection={scrollToSection}
+          />
         </div>
       </div>
 

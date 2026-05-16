@@ -41,7 +41,7 @@ const Projects = ({ state, projectsRef }) => {
       flex flex-col lg:flex-row
       w-full sm:w-[85vw] md:w-[80vw] flex-none
       rounded-2xl
-      bg-stone-900/80 backdrop-blur
+      bg-stone-900/80
       border border-stone-700
       shadow-lg shadow-black/40
       overflow-hidden
