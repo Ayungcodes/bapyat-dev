@@ -2,7 +2,7 @@ function Hero({ state, welcomeRef, contactRef, projectsRef, scrollToSection }) {
   return (
     <section
       ref={welcomeRef}
-      className={`relative w-full min-h-screen flex items-center px-6 md:px-12 lg:px-24 overflow-hidden bg-black ${
+      className={`relative w-full min-h-dvh flex items-center px-6 md:px-12 lg:px-24 overflow-hidden bg-black ${
         state.openNav ? "blur-sm" : "blur-none"
       }`}
     >
@@ -22,7 +22,7 @@ function Hero({ state, welcomeRef, contactRef, projectsRef, scrollToSection }) {
         }}
       />
 
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-yellow-600/15 animate-pulse duration-700 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-yellow-600/15 animate-pulse duration-700 rounded-full blur-[80px] pointer-events-none" />
 
       {/* hero items */}
       <div className="relative z-10 max-w-3xl w-full flex items-center justify-between">

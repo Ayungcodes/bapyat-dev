@@ -57,7 +57,7 @@ const AboutSection = ({
 
         {/* photo card - item 2 */}
         <div
-          className={`flex flex-col justify-center space-y-2 items-center h-[75vh] md:h-[56vh] w-[91%] lg:w-[45%] lg:h-[73vh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
+          className={`flex flex-col justify-center space-y-2 items-center h-[75dvh] md:h-[56dvh] w-[91%] lg:w-[45%] lg:h-[73dvh] bg-[#1f1f1f]/40 border-[2px] border-stone-800 mx-auto mt-32 shadow-sm rounded-2xl backdrop-blur-2xl`}
         >
           <div className="relative h-[200px] w-[200px] md:h-[230px] md:w-[230px]">
             <img
